@@ -1,29 +1,24 @@
-# Pratik Chandlekar 
+# Naukri
 
-Software Engineer | Backend & Cloud-Native Systems
+## Resume Headline
 
-Mumbai India
+```
+Software Engineer skilled in Java, Spring Boot, Spring Cloud microservices, Kafka (KRaft), PostgreSQL, Redis, API Gateway security, CI/CD pipelines, Docker, Kubernetes, and building scalable, production-grade systems.
+```
 
-- Mob: +91 9075467719
-- Email: pratikchandlekar280@gmail.com
-- LinkedIn: https://www.linkedin.com/in/pratik280
-- Github: https://github.com/Pratik280 
-- Website: https://pratik280.hashnode.dev/page/about
-- Blog: https://pratik280.hashnode.dev/
+## Employment 
 
----
+- ISG Job Profile
 
-Software Engineer with experience building production-grade backend systems using Java, Spring Boot, and Spring Cloud. Worked on Kafka-backed microservices, React JS and Angular dashboards consuming real-time APIs for transaction monitoring and merchant operations. Full-time Linux user with hands-on experience in containerized deployments, CI/CD pipelines, and cloud platforms, and actively writes technical blogs on backend engineering and system design.
-
-
-## Experience: In-Solution Global 
-
-- Mumbai
-- Software Engineer
-- June 2022 - Present
-
+```
+Software Engineer skilled in Java, Spring Boot, Spring Cloud microservices, Kafka (KRaft), PostgreSQL, Redis, API Gateway security, CI/CD pipelines, Docker, Kubernetes, and building scalable, production-grade systems.
 Software Engineer with strong experience building production-grade microservices using Spring Boot and Spring Cloud. Designed secure, highly available systems with API Gateway security, peer-aware service discovery, and Nginx load balancing, and implemented schema-based multitenancy after evaluating database sharding trade-offs. Built real-time transaction monitoring systems backed by PostgreSQL, Redis, and Kafka, including Kafka KRaft cluster setup and producer/consumer integration. Contributed to CI/CD pipelines, containerized deployments on AKS, centralized logging, and observability. Actively participated in Agile delivery, mentoring juniors, conducting code reviews, and resolving production-critical issues.
+```
 
+## Projects
+
+
+```
 ### Spring Boot API Development
 
 - Developed production-grade Spring Boot REST APIs using Spring MVC, Spring Data JPA, Hibernate, and layered architecture, leveraging DTOs, ModelMapper, and Lombok for clean, maintainable code.
@@ -48,35 +43,20 @@ Software Engineer with strong experience building production-grade microservices
 - Automated Helm chart versioning and deployments to Azure Kubernetes Service (AKS), and managed supporting infrastructure including Redis, Kafka, and PostgreSQL provisioned on Azure VMs to support microservice environments.
 - Used Docker Compose to spin up isolated test environments with Kafka, Redis, databases, and application containers, enabling local and CI-level integration testing.
 Integrated centralized logging and observability using ELK (Elasticsearch, Logstash, Kibana) along with Prometheus and Grafana, streaming logs and metrics from multiple microservices to dashboards for client-specific monitoring and faster production issue analysis.
+```
 
----
+## Profile Summary
 
-## Skills: 
+```
+Software Engineer with experience building production-grade backend systems using Java, Spring Boot, and Spring Cloud. Worked on Kafka-backed microservices, React JS and Angular dashboards consuming real-time APIs for transaction monitoring and merchant operations. Full-time Linux user with hands-on experience in containerized deployments, CI/CD pipelines, and cloud platforms, and actively writes technical blogs on backend engineering and system design.
+```
 
-**Core Java** : Object-Oriented Programming (OOP), Collections, Exception Handling, Multithreading & Concurrency
-**Backend** : Java, Spring Boot, Spring Cloud, Spring Security, Hibernate/JPA, REST API
-**Databases & Cache** : PostgreSQL, Redis, SQL
-**DevOps & CI/CD** : Jenkins, Docker, Kubernetes (AKS), Helm, Nexus, Docker Compose, Nginx
-**Cloud** : Amazon Web Services (AWS), Azure
-**Messaging & Streaming** : Apache Kafka (KRaft)
-**Observability** : ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus, Grafana
-**OS & Tools** : Linux, Bash, Git, ChatGPT, Copilot
-**Practices** : Agile/Scrum, Software Development Life Cycle (SDLC) 
-**Frontend** : Angular, React JS, Javascript, Typescript
+## Work Sample
 
----
+Work Title : Production‑Grade Spring Boot API Design
+URL : https://pratik280.hashnode.dev/series/production-grade-spring-boot-api-design
+Desc: A practical 3-part series on production-grade Spring Boot API design covering Web, JPA, clean architecture, DTOs, consistent responses, and global exception handling—based on real-world backend experience.
 
-## Certifications
-- AWS Certified Cloud Practitioner
-  - Amazon Web Services (AWS)
-  - Issued Jun 2024 · Expires Jun 2027
-  - June 30, 2024
-
----
-
-## Education
-- Mumbai University
-- Bachelor of Engineering
-- Computer Science
-- June 2018 - May 2022
-- 8.68
+Work Title : Production-Grade Spring Cloud Microservice Architecture
+URL : https://pratik280.hashnode.dev/series/production-grade-spring-cloud-microservice-architecture
+Desc : This series shares my real-world learning experience with Spring Cloud microservices. It focuses on how systems evolve in production, why service discovery, gateways, and load balancing needed.
