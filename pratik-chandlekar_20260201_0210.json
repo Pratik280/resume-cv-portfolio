@@ -1,0 +1,451 @@
+{
+  "picture": {
+    "hidden": false,
+    "url": "",
+    "size": 80,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 0,
+    "borderColor": "rgba(0, 0, 0, 0.5)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Pratik Chandlekar",
+    "headline": "Software Engineer",
+    "email": "pratikchandlekar280@gmail.com",
+    "phone": "+91 9075467719",
+    "location": "Mumbai India",
+    "website": {
+      "url": "https://pratik280.hashnode.dev/page/about",
+      "label": ""
+    },
+    "customFields": [
+      {
+        "id": "019c158d-b656-704c-b3ef-ad72dd33204d",
+        "icon": "linkedin-logo",
+        "text": "https://www.linkedin.com/in/pratik280",
+        "link": ""
+      },
+      {
+        "id": "019c158e-24a1-7357-bca6-27df46e06b7b",
+        "icon": "github-logo",
+        "text": "https://github.com/Pratik280",
+        "link": ""
+      },
+      {
+        "id": "019c158e-60d8-7637-a9af-907b63471a51",
+        "icon": "dev-to-logo",
+        "text": "https://pratik280.hashnode.dev/",
+        "link": ""
+      }
+    ]
+  },
+  "summary": {
+    "title": "",
+    "columns": 1,
+    "hidden": false,
+    "content": "<p>Software Engineer with strong experience building production-grade microservices using Spring Boot and Spring Cloud. Designed secure, highly available systems with API Gateway security, peer-aware service discovery, and Nginx load balancing, and implemented schema-based multitenancy after evaluating database sharding trade-offs. Built real-time transaction monitoring systems backed by PostgreSQL, Redis, and Kafka, including Kafka KRaft cluster setup and producer/consumer integration. Contributed to CI/CD pipelines, containerized deployments on AKS, centralized logging, and observability. Actively participated in Agile delivery, mentoring juniors, conducting code reviews, and resolving production-critical issues. Actively publishes technical blogs on backend engineering and system design.</p>"
+  },
+  "sections": {
+    "profiles": {
+      "title": "",
+      "columns": 1,
+      "hidden": true,
+      "items": [
+        {
+          "id": "019c1583-b800-75ce-b903-9010c9da3d32",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "icon": "acorn",
+          "network": "Linkedin",
+          "username": "pratik280",
+          "website": {
+            "url": "https://www.linkedin.com/in/pratik280",
+            "label": ""
+          }
+        },
+        {
+          "id": "019c1584-6db3-753e-afa4-e241c467f67d",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "icon": "github-logo",
+          "network": "Github",
+          "username": "Pratik280",
+          "website": {
+            "url": "https://github.com/Pratik280",
+            "label": ""
+          }
+        },
+        {
+          "id": "019c1584-f1b5-71fb-9c52-baf082becc2b",
+          "hidden": true,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "icon": "dev-to-logo",
+          "network": "Blog",
+          "username": "",
+          "website": {
+            "url": "https://pratik280.hashnode.dev/",
+            "label": ""
+          }
+        }
+      ]
+    },
+    "experience": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "019c1586-f401-752a-93d8-45efe23c2964",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": false
+          },
+          "company": "In-Solutions Global",
+          "position": "Software Engineer",
+          "location": "Mumbai",
+          "period": "June 2022 - Present",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p><strong>Spring Boot API Development:</strong></p><ul><li><p>Developed production-grade Spring Boot REST APIs using Spring MVC, Spring Data JPA, Hibernate, and layered architecture, leveraging DTOs, ModelMapper, and Lombok for clean, maintainable code.</p></li><li><p>Implemented consistent API response structures and global exception handling using @RestControllerAdvice, improving reliability, debuggability, and test coverage.</p></li><li><p>Built transaction monitoring APIs and a React-based monitoring dashboard with real-time transaction status, using PostgreSQL → Redis sync via scheduled Spring Boot jobs to support low-latency dashboard APIs.</p></li><li><p>Performed Kafka migration from ZooKeeper-based setup to KRaft mode, configuring a 3-node combined controller–broker cluster, tuning broker, controller, and server properties, and implementing Kafka producer and consumer APIs within Spring Boot microservices, including topic mirroring and cluster stretch scenarios.</p></li><li><p>Designed and implemented payment-link generation APIs to route transactions dynamically across Lyra, TPSL, and PayU based on merchant configuration and routing rules.</p></li><li><p>Created APIs handling Amex Target Transaction flows via SOCKS proxy, supporting POS and PG integrations for JPMC payment flows.</p></li><li><p>Contributed to Merchant Dashboard development in Angular, enabling merchant-wise transaction views, transaction lookup, downloadable transaction reports, and visibility into active/inactive payment targets (Lyra, TPSL).</p></li></ul><p></p><p><strong>Multi-Tenancy &amp; Database Architecture:</strong></p><ul><li><p>Evaluated database sharding for client data isolation, and after R&amp;D and trade-off analysis, designed and implemented schema-based multitenancy using Hibernate JPA, enabling a single Spring Boot application to serve multiple clients with strict data isolation per schema and simplified operational management.</p></li><li><p>Developed and optimized complex PostgreSQL join queries across multiple tables to efficiently retrieve transaction and payment data, working across development and production environments.</p></li></ul><p></p><p><strong>Spring Cloud Microservices Architecture &amp; API Gateway:</strong></p><ul><li><p>Implemented a production-grade microservices architecture using Spring Cloud Gateway and a peer-aware Eureka service discovery cluster, with multiple Gateway instances deployed in a cluster and load-balanced via Nginx upstream configuration for high availability and fault tolerance.</p></li><li><p>Resolved a critical production security issue by implementing an access-token validation filter in Spring Cloud Gateway, integrating with an RBAC authorization service (Spring Security), including bypass rules for internal and health endpoints, effectively preventing unauthorized public access to backend microservices.</p></li><li><p>Configured Nginx as a reverse proxy with SSL termination, domain-based routing, rewrite rules, and upstream load balancing, routing external traffic securely to the Spring Cloud Gateway cluster and onward to internal microservices.</p></li></ul><p></p><p><strong>CI/CD, Containerization &amp; Cloud Deployment (Jenkins, Docker, Helm, AKS):</strong></p><ul><li><p>Built Jenkins CI/CD pipelines for Spring Boot microservices to compile JARs using Maven, build Docker images, and push versioned images to the Nexus Docker Registry, enabling a consistent and repeatable deployment workflow.</p></li><li><p>Automated Helm chart versioning and deployments to Azure Kubernetes Service (AKS), and managed supporting infrastructure including Redis, Kafka, and PostgreSQL provisioned on Azure VMs to support microservice environments.</p></li><li><p>Used Docker Compose to spin up isolated test environments with Kafka, Redis, databases, and application containers, enabling local and CI-level integration testing.</p></li><li><p>Integrated centralized logging and observability using ELK (Elasticsearch, Logstash, Kibana) along with Prometheus and Grafana, streaming logs and metrics from multiple microservices to dashboards for client-specific monitoring and faster production issue analysis.</p></li></ul><p></p>"
+        }
+      ]
+    },
+    "education": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "019c1590-0142-7539-af77-086a2e759c0d",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "school": "Mumbai University",
+          "degree": "Bachelor of Engineering",
+          "area": "Computer Science",
+          "grade": "CGPA: 8.68",
+          "location": "Mumbai",
+          "period": "June 2018 - May 2022",
+          "website": {
+            "url": "https://www.linkedin.com/in/pratik280/overlay/1768148235813/single-media-viewer?type=IMAGE&profileId=ACoAAEJELowBF4gHKA_WsP9rwtXHkxowseSWWCU&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B4iP87gv2TfmMdxJTzaRKJg%3D%3D",
+            "label": ""
+          },
+          "description": ""
+        }
+      ]
+    },
+    "projects": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "skills": {
+      "title": "",
+      "columns": 1,
+      "hidden": true,
+      "items": [
+        {
+          "id": "019c1596-916a-7506-95e5-d0027aebcdd3",
+          "hidden": false,
+          "icon": "",
+          "name": "Core Java",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Object-Oriented Programming (OOP)",
+            "Collections",
+            "Exception Handling",
+            "Multithreading & Concurrency"
+          ]
+        },
+        {
+          "id": "019c1594-8c9f-70a4-8b71-18aac5f28b81",
+          "hidden": false,
+          "icon": "",
+          "name": "Backend",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Java",
+            "Spring Boot",
+            "Spring Cloud",
+            "Spring Security",
+            "Hibernate",
+            "JPA",
+            "REST API"
+          ]
+        },
+        {
+          "id": "019c159e-0488-72dd-a2b8-56220c3bde21",
+          "hidden": false,
+          "icon": "",
+          "name": "Database & Cache",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "SQL",
+            "PostgreSQL",
+            "Redis",
+            "Database Sharding",
+            "Database Multitenancy"
+          ]
+        },
+        {
+          "id": "019c159c-0939-747b-9b4c-a2c32f8402ce",
+          "hidden": false,
+          "icon": "",
+          "name": "Devops & CI/CD",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Jenkins",
+            "Docker",
+            "Kubernetes (AKS)",
+            "Helm",
+            "Nexus",
+            "Docker Compose",
+            "Nginx",
+            "Networking",
+            "SSL"
+          ]
+        },
+        {
+          "id": "019c159c-c8ff-73bd-9e1a-e890e6d4ad5a",
+          "hidden": false,
+          "icon": "",
+          "name": "Cloud",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Amazon Web Services (AWS)",
+            "Azure"
+          ]
+        },
+        {
+          "id": "019c15b5-11db-70ea-93b1-9797c78dc6a7",
+          "hidden": false,
+          "icon": "",
+          "name": "Messaging & Streaming",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Apache Kafka (KRaft)"
+          ]
+        },
+        {
+          "id": "019c159f-0d5a-709b-b14d-578b85184ede",
+          "hidden": false,
+          "icon": "",
+          "name": "Observability",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "ELK Stack (Elasticsearch Logstash, Kibana)",
+            "Prometheus",
+            "Grafana"
+          ]
+        },
+        {
+          "id": "019c159f-87f6-726c-a29b-ef73fe63e8d0",
+          "hidden": false,
+          "icon": "",
+          "name": "OS & Tools",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Git (Version Control)",
+            "Linux",
+            "Bash",
+            "ChatGPT",
+            "Copilot"
+          ]
+        },
+        {
+          "id": "019c15b9-b11a-7776-8b05-0b9719d96090",
+          "hidden": false,
+          "icon": "",
+          "name": "Practices",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Agile/Scrum",
+            "Software Development Life Cycle (SDLC)"
+          ]
+        },
+        {
+          "id": "019c15b3-608a-7094-a85a-11c4033ab2c8",
+          "hidden": false,
+          "icon": "",
+          "name": "Frontend",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Angular",
+            "React",
+            "Javascript",
+            "Typescript"
+          ]
+        }
+      ]
+    },
+    "languages": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "interests": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "awards": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "certifications": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "019c1591-c2e9-7158-ba20-c5115191ba3f",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "title": "AWS Certified Cloud Practitioner",
+          "issuer": "Amazon Web Services (AWS)",
+          "date": "June 2024",
+          "website": {
+            "url": "https://www.credly.com/badges/bee394d0-95b9-492f-bf05-17682aa871f6/linked_in_profile",
+            "label": ""
+          },
+          "description": ""
+        }
+      ]
+    },
+    "publications": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "volunteer": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "references": {
+      "title": "",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    }
+  },
+  "customSections": [
+    {
+      "title": "Skills sadasd ",
+      "columns": 1,
+      "hidden": false,
+      "id": "019c15bb-ff71-729a-84f9-f56a501ec6f6",
+      "type": "summary",
+      "items": [
+        {
+          "id": "019c15bf-f9dd-75a9-ba5e-112c87e69d8c",
+          "hidden": false,
+          "content": "<hr><p></p><p><strong>Skills:</strong></p><p><strong>Core Java</strong> : Object-Oriented Programming (OOP), Collections, Exception Handling, Multithreading &amp; Concurrency</p><p><strong>Backend</strong> : Java, Spring Boot, Spring Cloud, Spring Security, Hibernate/JPA, REST API</p><p><strong>Databases &amp; Cache</strong> : PostgreSQL, Redis, SQL</p><p><strong>DevOps &amp; CI/CD</strong> : Jenkins, Docker, Kubernetes (AKS), Helm, Nexus, Docker Compose, Nginx</p><p><strong>Cloud</strong> : Amazon Web Services (AWS), Azure</p><p><strong>Messaging &amp; Streaming</strong> : Apache Kafka (KRaft)</p><p><strong>Observability</strong> : ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus, Grafana</p><p><strong>OS &amp; Tools</strong> : Linux, Bash, Git, ChatGPT, Copilot</p><p><strong>Practices</strong> : Agile/Scrum, Software Development Life Cycle (SDLC)</p><p><strong>Frontend</strong> : Angular, React, Javascript, Typescript</p>"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "template": "rhyhorn",
+    "layout": {
+      "sidebarWidth": 35,
+      "pages": [
+        {
+          "fullWidth": true,
+          "main": [
+            "profiles",
+            "summary",
+            "experience",
+            "019c15bb-ff71-729a-84f9-f56a501ec6f6",
+            "skills",
+            "certifications",
+            "education",
+            "projects",
+            "volunteer",
+            "references",
+            "awards",
+            "languages",
+            "interests",
+            "publications"
+          ],
+          "sidebar": []
+        }
+      ]
+    },
+    "css": {
+      "enabled": false,
+      "value": ""
+    },
+    "page": {
+      "gapX": 4,
+      "gapY": 6,
+      "marginX": 14,
+      "marginY": 12,
+      "format": "free-form",
+      "locale": "en-US",
+      "hideIcons": false
+    },
+    "design": {
+      "level": {
+        "icon": "star",
+        "type": "circle"
+      },
+      "colors": {
+        "primary": "rgba(69, 85, 108, 1)",
+        "text": "rgba(0, 0, 0, 1)",
+        "background": "rgba(255, 255, 255, 1)"
+      }
+    },
+    "typography": {
+      "body": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "400",
+          "500"
+        ],
+        "fontSize": 10,
+        "lineHeight": 1.5
+      },
+      "heading": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "600"
+        ],
+        "fontSize": 14,
+        "lineHeight": 1.5
+      }
+    },
+    "notes": ""
+  }
+}

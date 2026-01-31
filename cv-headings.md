@@ -17,7 +17,10 @@ Software Engineer with experience building production-grade backend systems usin
 
 
 ## Experience: In-Solution Global 
-June 2022 - Present
+
+- Mumbai
+- Software Engineer
+- June 2022 - Present
 
 Software Engineer with strong experience building production-grade microservices using Spring Boot and Spring Cloud. Designed secure, highly available systems with API Gateway security, peer-aware service discovery, and Nginx load balancing, and implemented schema-based multitenancy after evaluating database sharding trade-offs. Built real-time transaction monitoring systems backed by PostgreSQL, Redis, and Kafka, including Kafka KRaft cluster setup and producer/consumer integration. Contributed to CI/CD pipelines, containerized deployments on AKS, centralized logging, and observability. Actively participated in Agile delivery, mentoring juniors, conducting code reviews, and resolving production-critical issues.
 
@@ -50,38 +53,29 @@ Integrated centralized logging and observability using ELK (Elasticsearch, Logst
 
 ## Skills: 
 
-- Languages/Frameworks:
-  - Java, Javascript, Typescript, Spring Boot, Spring Cloud, Spring Security, Hibernate, JPA, SQL, PostgreSQL, Angular, React
-  - Core Java, OOP, Collections, Exception Handling, Spring MVC, REST API design, Multithreading & Concurrency
-
-- Microservices:
-  - Eureka, Spring Cloud Gateway, Nginx proxying, Apache Kafka
-  
-- DevOps & CI/CD:
-  - Jenkins, Gihub CI, Docker, Kubernetes & Helm, Nexus
-
-- Cloud:
-  - AWS, Azure (AKS), OCIa
-  
-- Databases & Caches:
-  - PostgreSQL, Redis, Database Sharding, Multitenancy
-
-- Monitoring & Logging:
-  - ELK Stack, Prometheus, Grafana
-
-- Tools & Practices:
-  - Git, Linux, REST APIs, SSL, Networking, Vim, VScode, Intellij, ChatGPT, Copilot, Azure GCP SDLC Life Cycle, Agile/Scrum
+**Core Java** : Object-Oriented Programming (OOP), Collections, Exception Handling, Multithreading & Concurrency
+**Backend** : Java, Spring Boot, Spring Cloud, Spring Security, Hibernate/JPA, REST API
+**Databases & Cache** : PostgreSQL, Redis, SQL
+**DevOps & CI/CD** : Jenkins, Docker, Kubernetes (AKS), Helm, Nexus, Docker Compose, Nginx
+**Cloud** : Amazon Web Services (AWS), Azure
+**Messaging & Streaming** : Apache Kafka (KRaft)
+**Observability** : ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus, Grafana
+**OS & Tools** : Linux, Bash, Git, ChatGPT, Copilot
+**Practices** : Agile/Scrum, Software Development Life Cycle (SDLC) 
+**Frontend** : Angular, React, Javascript, Typescript
 
 ---
 
 ## Certifications
 - AWS Certified Cloud Practitioner
+  - Amazon Web Services (AWS)
+  - Issued Jun 2024 · Expires Jun 2027
   - June 30, 2024
 
 ---
 
 ## Education
-- St. John College of Engineering and Management | Mumbai University
+- Mumbai University
 - Bachelor of Engineering
 - Computer Science
 - June 2018 - May 2022
