@@ -24,6 +24,9 @@ Software Engineer with experience building production-grade backend systems usin
 
 Software Engineer with strong experience building production-grade microservices using Spring Boot and Spring Cloud. Designed secure, highly available systems with API Gateway security, peer-aware service discovery, and Nginx load balancing, and implemented schema-based multitenancy after evaluating database sharding trade-offs. Built real-time transaction monitoring systems backed by PostgreSQL, Redis, and Kafka, including Kafka KRaft cluster setup and producer/consumer integration. Contributed to CI/CD pipelines, containerized deployments on AKS, centralized logging, and observability. Actively participated in Agile delivery, mentoring juniors, conducting code reviews, and resolving production-critical issues.
 
+Combined: 
+Software Engineer with strong experience building production-grade microservices using Spring Boot and Spring Cloud. Designed secure, highly available systems with API Gateway security, peer-aware service discovery, and Nginx load balancing, and implemented schema-based multitenancy after evaluating database sharding trade-offs. Built real-time transaction monitoring systems backed by PostgreSQL, Redis, and Kafka, including Kafka KRaft cluster setup and producer/consumer integration. Contributed to CI/CD pipelines, containerized deployments on AKS, centralized logging, and observability. Actively participated in Agile delivery, mentoring juniors, conducting code reviews, and resolving production-critical issues. Actively publishes technical blogs on backend engineering and system design.
+
 ### Spring Boot API Development
 
 - Developed production-grade Spring Boot REST APIs using Spring MVC, Spring Data JPA, Hibernate, and layered architecture, leveraging DTOs, ModelMapper, and Lombok for clean, maintainable code.
@@ -47,7 +50,7 @@ Software Engineer with strong experience building production-grade microservices
 - Built Jenkins CI/CD pipelines for Spring Boot microservices to compile JARs using Maven, build Docker images, and push versioned images to the Nexus Docker Registry, enabling a consistent and repeatable deployment workflow.
 - Automated Helm chart versioning and deployments to Azure Kubernetes Service (AKS), and managed supporting infrastructure including Redis, Kafka, and PostgreSQL provisioned on Azure VMs to support microservice environments.
 - Used Docker Compose to spin up isolated test environments with Kafka, Redis, databases, and application containers, enabling local and CI-level integration testing.
-Integrated centralized logging and observability using ELK (Elasticsearch, Logstash, Kibana) along with Prometheus and Grafana, streaming logs and metrics from multiple microservices to dashboards for client-specific monitoring and faster production issue analysis.
+- Integrated centralized logging and observability using ELK (Elasticsearch, Logstash, Kibana) along with Prometheus and Grafana, streaming logs and metrics from multiple microservices to dashboards for client-specific monitoring and faster production issue analysis.
 
 ---
 
@@ -71,6 +74,7 @@ Integrated centralized logging and observability using ELK (Elasticsearch, Logst
   - Amazon Web Services (AWS)
   - Issued Jun 2024 · Expires Jun 2027
   - June 30, 2024
+  - Link: https://www.credly.com/badges/bee394d0-95b9-492f-bf05-17682aa871f6/linked_in_profile
 
 ---
 
@@ -80,3 +84,4 @@ Integrated centralized logging and observability using ELK (Elasticsearch, Logst
 - Computer Science
 - June 2018 - May 2022
 - 8.68
+- Link: https://www.linkedin.com/in/pratik280/overlay/1768148235813/single-media-viewer?type=IMAGE&profileId=ACoAAEJELowBF4gHKA_WsP9rwtXHkxowseSWWCU&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B7wWW%2BQFHS5uI5eEd%2Fn9TqQ%3D%3D
