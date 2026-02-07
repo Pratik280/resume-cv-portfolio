@@ -1,25 +1,14 @@
 {
   "basics": {
+    "name": "Pratik Chandlekar ",
+    "headline": "Software Engineer ",
+    "email": "pratikchandlekar280@gmail.com",
+    "phone": "+91 9075467719",
+    "location": "Mumbai, India",
     "url": {
       "label": "",
       "href": "https://pratik280.hashnode.dev/page/about"
     },
-    "name": "Pratik Chandlekar ",
-    "email": "pratikchandlekar280@gmail.com",
-    "phone": "+91 9075467719",
-    "picture": {
-      "url": "",
-      "size": 64,
-      "aspectRatio": 1,
-      "borderRadius": 0,
-      "effects": {
-        "hidden": false,
-        "border": false,
-        "grayscale": false
-      }
-    },
-    "headline": "Software Engineer ",
-    "location": "Mumbai, India",
     "customFields": [
       {
         "id": "gogoyrgj5h0b231bw8kzog6f",
@@ -39,62 +28,17 @@
         "name": "https://pratik280.hashnode.dev/",
         "value": "https://pratik280.hashnode.dev/"
       }
-    ]
-  },
-  "metadata": {
-    "css": {
-      "value": "* {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}",
-      "visible": false
-    },
-    "page": {
-      "margin": 18,
-      "format": "a4",
-      "options": {
-        "breakLine": false,
-        "pageNumbers": true
-      }
-    },
-    "notes": "",
-    "theme": {
-      "background": "#ffffff",
-      "text": "#000000",
-      "primary": "#475569"
-    },
-    "layout": [
-      [
-        [
-          "profiles",
-          "summary",
-          "experience",
-          "skills",
-          "custom.x9jilpko1hfi4hveayisjei8",
-          "certifications",
-          "projects",
-          "volunteer",
-          "references"
-        ],
-        [
-          "interests",
-          "awards",
-          "publications",
-          "education",
-          "languages"
-        ]
-      ]
     ],
-    "template": "rhyhorn",
-    "typography": {
-      "font": {
-        "family": "IBM Plex Serif",
-        "subset": "latin",
-        "variants": [
-          "regular"
-        ],
-        "size": 14
-      },
-      "lineHeight": 1.5,
-      "hideIcons": false,
-      "underlineLinks": true
+    "picture": {
+      "url": "",
+      "size": 64,
+      "aspectRatio": 1,
+      "borderRadius": 0,
+      "effects": {
+        "hidden": false,
+        "border": false,
+        "grayscale": false
+      }
     }
   },
   "sections": {
@@ -104,7 +48,7 @@
       "separateLinks": true,
       "visible": true,
       "id": "summary",
-      "content": "<p>Software Engineer with strong experience building production-grade microservices using Spring Boot and Spring Cloud. Designed secure, highly available systems with API Gateway security, peer-aware service discovery, and Nginx load balancing, and implemented schema-based multitenancy after evaluating database sharding trade-offs. Built real-time transaction monitoring systems backed by PostgreSQL, Redis, and Kafka, including Kafka KRaft cluster setup and producer/consumer integration. Contributed to CI/CD pipelines, containerized deployments on AKS, centralized logging, and observability. Actively participated in Agile delivery, mentoring juniors, conducting code reviews, and resolving production-critical issues. Actively publishes technical blogs on backend engineering and system design.</p>"
+      "content": "<p>Software Engineer with strong experience building production-grade microservices using Spring Boot and Spring Cloud primarily in the banking and payments domain. Designed secure, highly available systems with API Gateway security, peer-aware service discovery, and Nginx load balancing, and implemented schema-based multitenancy after evaluating database sharding trade-offs. Built real-time transaction monitoring systems backed by PostgreSQL, Redis, and Kafka, including Kafka KRaft cluster setup and producer/consumer integration. Contributed to CI/CD pipelines, containerized deployments on AKS, centralized logging, and observability. Actively participated in Agile delivery, mentoring juniors, conducting code reviews, and resolving production-critical issues. Actively publishes technical blogs on backend engineering and system design.</p>"
     },
     "awards": {
       "name": "Awards",
@@ -172,7 +116,7 @@
           "position": "Software Engineer",
           "location": "Mumbai",
           "date": "June 2022 - Present",
-          "summary": "<p><strong>Spring Boot API Development</strong></p><ul><li><p>Developed production-grade Spring Boot REST APIs using Spring MVC, Spring Data JPA, Hibernate, and layered architecture, leveraging DTOs, ModelMapper, and Lombok for clean, maintainable code.</p></li></ul><ul><li><p>Implemented consistent API response structures and global exception handling using @RestControllerAdvice, improving reliability, debuggability, and test coverage.</p></li></ul><ul><li><p>Built transaction monitoring APIs and a React JS monitoring dashboard with real-time transaction status, using PostgreSQL → Redis sync via scheduled Spring Boot jobs to support low-latency dashboard APIs.</p></li></ul><ul><li><p>Performed Kafka migration from ZooKeeper-based setup to KRaft mode, configuring a 3-node combined controller–broker cluster, tuning broker, controller, and server properties, and implementing Kafka producer and consumer API within Spring Boot microservices, including topic mirroring and cluster stretch scenarios.</p></li></ul><ul><li><p>Designed and implemented payment-link generation APIs to route transactions dynamically across Lyra, TPSL, and PayU based on merchant configuration and routing rules.</p></li></ul><ul><li><p>Created APIs handling Amex Target Transaction flows via SOCKS proxy, supporting POS and PG integrations for JPMC payment flows.</p></li></ul><ul><li><p>Contributed to Merchant Dashboard development in Angular, enabling merchant-wise transaction views, transaction lookup, downloadable transaction reports, and visibility into active/inactive payment targets (Lyra, TPSL).</p></li></ul><p style=\"text-align: justify;\"><strong>Multi-Tenancy &amp; Database Architecture</strong></p><ul><li><p style=\"text-align: justify;\">Evaluated database sharding for client data isolation, and after R&amp;D and trade-off analysis, designed and implemented schema-based multitenancy using Hibernate JPA, enabling a single Spring Boot application to serve multiple clients with strict data isolation per schema and simplified operational management.</p></li><li><p>Developed and optimized complex PostgreSQL join queries across multiple tables to efficiently retrieve transaction and payment data, working across development and production environments.</p></li></ul><p style=\"text-align: justify;\"><strong> Spring Cloud Microservices Architecture &amp; API Gateway</strong></p><ul><li><p style=\"text-align: justify;\">Implemented a production-grade microservices architecture using Spring Cloud Gateway and a peer-aware Eureka service discovery cluster, with multiple Gateway instances deployed in a cluster and load-balanced via Nginx upstream configuration for high availability and fault tolerance.</p></li></ul><ul><li><p>Resolved a critical production security issue by implementing an access-token validation filter in Spring Cloud Gateway, integrating with an RBAC authorization service (Spring Security), including bypass rules for internal and health endpoints, effectively preventing unauthorized public access to backend microservices.</p></li></ul><ul><li><p>Configured Nginx as a reverse proxy with SSL termination, domain-based routing, rewrite rules, and upstream load balancing, routing external traffic securely to the Spring Cloud Gateway cluster and onward to internal microservices.</p></li></ul><p><strong>CI/CD, Containerization &amp; Cloud Deployment (Jenkins, Docker, Helm, AKS)</strong></p><ul><li><p>Built Jenkins CI/CD pipelines for Spring Boot microservices to compile JARs using Maven, build Docker images, and push versioned images to the Nexus Docker Registry, enabling a consistent and repeatable deployment workflow.</p></li></ul><ul><li><p>Automated Helm chart versioning and deployments to Azure Kubernetes Service (AKS), and managed supporting infrastructure including Redis, Kafka, and PostgreSQL provisioned on Azure VMs to support microservice environments.</p></li></ul><ul><li><p>Used Docker Compose to spin up isolated test environments with Kafka, Redis, databases, and application containers, enabling local and CI-level integration testing.</p></li></ul><ul><li><p>Integrated centralized logging and observability using ELK (Elasticsearch, Logstash, Kibana) along with Prometheus and Grafana, streaming logs and metrics from multiple microservices to dashboards for client-specific monitoring and faster production issue analysis.</p></li></ul>",
+          "summary": "<p><strong>Spring Boot API Development</strong></p><ul><li><p>Developed production-grade Spring Boot REST APIs using Spring MVC, Spring Data JPA, Hibernate, and layered architecture, leveraging DTOs, ModelMapper, and Lombok for clean, maintainable code.</p></li></ul><ul><li><p>Implemented consistent API response structures and global exception handling using @RestControllerAdvice, improving reliability, debuggability, and test coverage.</p></li></ul><ul><li><p>Built transaction monitoring APIs and a React JS monitoring dashboard with real-time transaction status, using PostgreSQL → Redis sync via scheduled Spring Boot jobs to support low-latency dashboard APIs.</p></li></ul><ul><li><p>Performed Kafka migration from ZooKeeper-based setup to KRaft mode, configuring a 3-node combined controller–broker cluster, tuning broker, controller, and server properties, and implementing Kafka producer and consumer APIs within Spring Boot microservices, including topic mirroring and cluster stretch scenarios.</p></li></ul><ul><li><p>Designed and implemented payment-link generation APIs to route transactions dynamically across Lyra, TPSL, and PayU based on merchant configuration and routing rules.</p></li></ul><ul><li><p>Created APIs handling Amex Target Transaction flows via SOCKS proxy, supporting POS and PG integrations for JPMC payment flows.</p></li></ul><ul><li><p>Contributed to Merchant Dashboard development in Angular, enabling merchant-wise transaction views, transaction lookup, downloadable transaction reports, and visibility into active/inactive payment targets (Lyra, TPSL).</p></li></ul><p style=\"text-align: justify;\"><strong>Multi-Tenancy &amp; Database Architecture</strong></p><ul><li><p style=\"text-align: justify;\">Evaluated database sharding for client data isolation, and after R&amp;D and trade-off analysis, designed and implemented schema-based multitenancy using Hibernate JPA, enabling a single Spring Boot application to serve multiple clients with strict data isolation per schema and simplified operational management.</p></li><li><p>Developed and optimized complex PostgreSQL join queries across multiple tables to efficiently retrieve transaction and payment data, working across development and production environments.</p></li></ul><p style=\"text-align: justify;\"><strong> Spring Cloud Microservices Architecture &amp; API Gateway</strong></p><ul><li><p style=\"text-align: justify;\">Implemented a production-grade microservices architecture using Spring Cloud Gateway and a peer-aware Eureka service discovery cluster, with multiple Gateway instances deployed in a cluster and load-balanced via Nginx upstream configuration for high availability and fault tolerance.</p></li></ul><ul><li><p>Resolved a critical production security issue by implementing an access-token validation filter in Spring Cloud Gateway, integrating with an RBAC authorization service (Spring Security), including bypass rules for internal and health endpoints, effectively preventing unauthorized public access to backend microservices.</p></li></ul><ul><li><p>Configured Nginx as a reverse proxy with SSL termination, domain-based routing, rewrite rules, and upstream load balancing, routing external traffic securely to the Spring Cloud Gateway cluster and onward to internal microservices.</p></li></ul><p><strong>CI/CD, Containerization &amp; Cloud Deployment (Jenkins, Docker, Helm, AKS)</strong></p><ul><li><p>Built Jenkins CI/CD pipelines for Spring Boot microservices to compile JARs using Maven, build Docker images, and push versioned images to the Nexus Docker Registry, enabling a consistent and repeatable deployment workflow.</p></li></ul><ul><li><p>Automated Helm chart versioning and deployments to Azure Kubernetes Service (AKS), and managed supporting infrastructure including Redis, Kafka, and PostgreSQL provisioned on Azure VMs to support microservice environments.</p></li></ul><ul><li><p>Used Docker Compose to spin up isolated test environments with Kafka, Redis, databases, and application containers, enabling local and CI-level integration testing.</p></li></ul><ul><li><p>Integrated centralized logging and observability using ELK (Elasticsearch, Logstash, Kibana) along with Prometheus and Grafana, streaming logs and metrics from multiple microservices to dashboards for client-specific monitoring and faster production issue analysis.</p></li></ul>",
           "url": {
             "label": "",
             "href": ""
@@ -365,5 +309,61 @@
         ]
       }
     }
+  },
+  "metadata": {
+    "template": "rhyhorn",
+    "layout": [
+      [
+        [
+          "profiles",
+          "summary",
+          "experience",
+          "skills",
+          "custom.x9jilpko1hfi4hveayisjei8",
+          "certifications",
+          "projects",
+          "volunteer",
+          "references"
+        ],
+        [
+          "interests",
+          "awards",
+          "publications",
+          "education",
+          "languages"
+        ]
+      ]
+    ],
+    "css": {
+      "value": "* {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}",
+      "visible": false
+    },
+    "page": {
+      "margin": 18,
+      "format": "a4",
+      "options": {
+        "breakLine": false,
+        "pageNumbers": true
+      }
+    },
+    "theme": {
+      "background": "#ffffff",
+      "text": "#000000",
+      "primary": "#475569"
+    },
+    "typography": {
+      "font": {
+        "family": "IBM Plex Serif",
+        "subset": "latin",
+        "variants": [
+          "regular"
+        ],
+        "size": 14
+      },
+      "lineHeight": 1.5,
+      "hideIcons": false,
+      "underlineLinks": true
+    },
+    "notes": ""
   }
 }
