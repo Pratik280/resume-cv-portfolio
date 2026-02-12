@@ -16,7 +16,7 @@ Always interested in solving backend, platform, and distributed systems problems
 ## Featured
 
 ### CV:
-- Title : Backend Software Engineer Resume | Java • Spring Boot • Kafka • Cloud
+- Title : Software Engineer Resume | Java • Spring Boot • Kafka • Cloud
 - Desc : Resume showcasing backend engineering experience in Java and Spring Boot, building scalable microservices with Kafka, PostgreSQL, Redis, API Gateway security, CI/CD, Docker, Kubernetes (AKS),
 
 ## Experience
