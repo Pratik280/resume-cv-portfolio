@@ -1,0 +1,27 @@
+ibody {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 12pt;
+    color: #222;
+    margin: 40px;
+}
+
+h1 {
+    font-size: 20pt;
+    margin-bottom: 5px;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+p {
+    margin-bottom: 14px;
+    text-align: justify;
+}
+
+strong {
+    font-weight: 600;
+}
