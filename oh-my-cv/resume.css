@@ -1,0 +1,100 @@
+/* ===== Typography improvements ===== */
+
+#resume-preview [data-scope="vue-smart-pages"][data-part="page"] {
+  font-size: 11pt;
+  line-height: 1.35;
+}
+
+/* Reduce vertical whitespace globally */
+#resume-preview p,
+#resume-preview li {
+  margin-bottom: 2px;
+}
+
+/* Section spacing (important) */
+#resume-preview h2 {
+  margin-top: 12px;
+  margin-bottom: 6px;
+  padding-bottom: 2px;
+}
+
+/* Slightly smaller section headers */
+#resume-preview h2,
+#resume-preview h3 {
+  font-size: 1.15em;
+}
+
+/* ===== Header improvements ===== */
+
+#resume-preview .resume-header {
+  margin-bottom: 10px;
+}
+
+#resume-preview .resume-header h1 {
+  font-size: 2.25em;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Lists more compact ===== */
+
+#resume-preview ul {
+  margin: 0.15em 0;
+}
+
+/* ===== Skills section (clean 2-column layout) ===== */
+
+#resume-preview .skills ul {
+  column-count: 2;
+  column-gap: 28px;
+}
+
+#resume-preview .skills li {
+  break-inside: avoid;
+}
+
+/* ===== Experience section spacing ===== */
+
+#resume-preview .experience-item {
+  margin-bottom: 8px;
+}
+
+/* ===== Print optimization (very important) ===== */
+
+@media print {
+  #resume-preview [data-scope="vue-smart-pages"][data-part="page"] {
+    font-size: 10.5pt;
+  }
+}
+
+#resume-preview ul li {
+  margin-bottom: 3px;
+}
+
+/* Bullets only inside Experience */
+#resume-preview .experience ul {
+  list-style-type: disc;
+  padding-left: 1.4em;
+}
+
+#resume-preview .experience ul li {
+  display: list-item;
+  margin-bottom: 3px;
+}
+
+/* Reduce section spacing slightly */
+#resume-preview h2 {
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+/* Tighten education section */
+#resume-preview section:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Reduce line spacing slightly for print */
+@media print {
+  #resume-preview [data-scope="vue-smart-pages"][data-part="page"] {
+    line-height: 1.28;
+  }
+}

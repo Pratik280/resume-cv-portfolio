@@ -1,4 +1,21 @@
+# Pratik Chandlekar
+Software Engineer | Mumbai, India  
++91 9075467719 • pratikchandlekar280@gmail.com • 
+[LinkedIn](https://www.linkedin.com/in/pratik280) • [GitHub](https://github.com/Pratik280) • 
+[Portfolio](https://pratik280.hashnode.dev/page/about) • [Blog](https://pratik280.hashnode.dev/)
+
+/* Two-column skills section */
+#resume-preview .skills ul {
+  column-count: 2;
+  column-gap: 30px;
+}
+
+
+
 # Pratik Chandlekar 
+
+
+
 
 Software Engineer | Backend & Cloud-Native Systems
 
@@ -68,16 +85,16 @@ Software Engineer with strong experience building production-grade microservices
 
 ## Skills: 
 
-**Core Java** : Object-Oriented Programming (OOP), Collections, Exception Handling, Multithreading & Concurrency
-**Backend** : Java, Spring Boot, Spring Cloud, Spring Security, Hibernate/JPA, REST API, Maven
-**Databases & Cache** : PostgreSQL, Redis, SQL
-**DevOps & CI/CD** : Jenkins, Docker, Kubernetes (AKS), Helm, Nexus, Docker Compose, Nginx
-**Cloud** : Amazon Web Services (AWS), Azure
-**Messaging & Streaming** : Apache Kafka (KRaft)
-**Observability** : ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus, Grafana
-**OS & Tools** : Linux, Bash, Git, ChatGPT, Copilot
-**Practices** : Agile/Scrum, Software Development Life Cycle (SDLC) 
-**Frontend** : Angular, React JS, Javascript, Typescript, HTML5, CSS3
+- **Languages:** Java, JavaScript, TypeScript, SQL
+- **Backend:** Spring Boot, Spring Cloud, Spring Security, Hibernate/JPA, REST APIs, Maven
+- **Cloud & DevOps:** AWS, Azure, Docker, Kubernetes (AKS), Jenkins, Helm, Nexus, Nginx
+- **Databases & Cache:** PostgreSQL, Redis
+- **Core Java** : Object-Oriented Programming (OOP), Collections, Exception Handling, Multithreading & Concurrency
+- **Messaging & Streaming:** Apache Kafka (KRaft)
+- **Observability:** ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus, Grafana
+- **Frontend:** Angular, React JS, HTML5, CSS3
+- **OS & Tools** : Linux, Bash, Git, ChatGPT, Copilot
+- **Practices** : Agile/Scrum, Software Development Life Cycle (SDLC)
 
 ---
 
@@ -97,3 +114,5 @@ Software Engineer with strong experience building production-grade microservices
 - June 2018 - May 2022
 - 8.68
 - Link: https://www.linkedin.com/in/pratik280/overlay/1768148235813/single-media-viewer?type=IMAGE&profileId=ACoAAEJELowBF4gHKA_WsP9rwtXHkxowseSWWCU&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B7wWW%2BQFHS5uI5eEd%2Fn9TqQ%3D%3D
+
+ohmycv
