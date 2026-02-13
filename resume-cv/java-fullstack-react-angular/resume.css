@@ -1,0 +1,83 @@
+/* ===== Typography ===== */
+
+#resume-preview [data-scope="vue-smart-pages"][data-part="page"] {
+  font-size: 10.9pt;
+  line-height: 1.30;
+}
+
+/* Reduce vertical whitespace */
+#resume-preview p,
+#resume-preview li {
+  margin-bottom: 2px;
+}
+
+/* ===== Section spacing ===== */
+
+#resume-preview section {
+  margin-bottom: 6px;
+}
+
+#resume-preview h2 {
+  margin-top: 9px;
+  margin-bottom: 4px;
+  padding-bottom: 1px;
+}
+
+#resume-preview h2,
+#resume-preview h3 {
+  font-size: 1.14em;
+}
+
+/* ===== Header ===== */
+
+#resume-preview .resume-header {
+  margin-bottom: 8px;
+}
+
+#resume-preview .resume-header h1 {
+  font-size: 2.2em;
+  letter-spacing: 0.4px;
+}
+
+/* ===== Lists ===== */
+
+#resume-preview ul {
+  margin: 0.12em 0;
+}
+
+/* ===== Skills (2 columns) ===== */
+
+#resume-preview .skills ul {
+  column-count: 2;
+  column-gap: 22px;
+}
+
+#resume-preview .skills li {
+  break-inside: avoid;
+}
+
+/* ===== Experience spacing ===== */
+
+#resume-preview .experience-item {
+  margin-bottom: 6px;
+}
+
+/* KEEP BULLETS IN EXPERIENCE */
+#resume-preview .experience ul {
+  list-style-type: disc;
+  padding-left: 1.35em;
+}
+
+#resume-preview .experience ul li {
+  display: list-item;
+  margin-bottom: 2px;
+}
+
+/* ===== Print optimization ===== */
+
+@media print {
+  #resume-preview [data-scope="vue-smart-pages"][data-part="page"] {
+    font-size: 10.6pt;
+    line-height: 1.27;
+  }
+}
