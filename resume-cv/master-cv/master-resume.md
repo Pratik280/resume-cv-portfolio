@@ -7,14 +7,7 @@ Software Engineer | Mumbai, India
 
 ## Summary
 
-Software Engineer with 3.9 years of experience in system design and development of
-scalable distributed systems, microservices architectures, and high-availability
-transaction-processing platforms using Java (8/11/17), Spring Boot, and Spring Cloud
-in the banking and payments domain. Experienced in secure API Gateway architectures,
-schema-based multitenancy, Kafka-based real-time systems, and containerized
-deployments on Kubernetes (AKS). Hands-on experience across backend, cloud deployment,
-CI/CD pipelines, observability, and production issue resolution, along with mentoring
-junior developers and contributing to system architecture decisions.
+Software Engineer with ~4 years of experience building high-availability distributed microservices using Java (8/11/17), Spring Boot, Kafka, and Kubernetes. Experienced in designing secure API gateway architectures, schema-based multitenancy solutions, and real-time transaction processing systems in the banking and payments domain. Hands-on expertise in cloud-native deployments on AWS and Azure, CI/CD automation, observability, and production reliability, along with mentoring engineers and contributing to system architecture decisions.
 
 
 ## Experience
@@ -41,7 +34,7 @@ Jun 2022 – Present
 
 - **Languages:** Java, JavaScript, TypeScript, SQL
 - **Backend:** Spring Framework (Spring Boot, Spring MVC, Spring Cloud, Spring Security), Hibernate/JPA, REST APIs, Maven
-- **Cloud & DevOps:** AWS, Azure, Docker, Kubernetes (AKS), Jenkins, Helm, Nexus, Nginx
+- **Cloud & DevOps:** AWS, Azure, Docker, Kubernetes (AKS), CI/CD (Jenkins), Helm, Nexus, Nginx
 - **Databases & Cache:** PostgreSQL, Redis
 - **Messaging & Streaming:** Apache Kafka (KRaft)
 - **Core Java** : Object-Oriented Programming (OOP), Collections, Exception Handling, Multithreading & Concurrency
