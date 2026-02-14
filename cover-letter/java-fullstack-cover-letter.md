@@ -16,5 +16,8 @@ I enjoy collaborating across product, QA, and DevOps teams throughout the full s
 
 I would welcome the opportunity to bring my full-stack engineering expertise and problem-solving skills to your team. Thank you for your time and consideration.
 
-Sincerely,  
-**Pratik Chandlekar**
+Sincerely,<br>
+**Pratik Chandlekar**<br>
+Mumbai, India<br>
++91 9075467719<br>
+pratikchandlekar280@gmail.com

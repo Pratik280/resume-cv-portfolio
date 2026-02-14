@@ -7,7 +7,7 @@ Software Engineer | Mumbai, India
 
 ## Summary
 
-Software Engineer with ~4 years of experience building high-availability distributed microservices using Java (8/11/17), Spring Boot, Kafka, and Kubernetes. Experienced in designing secure API gateway architectures, schema-based multitenancy solutions, and real-time transaction processing systems in the banking and payments domain. Hands-on expertise in cloud-native deployments on AWS and Azure, CI/CD automation, observability, and production reliability, along with mentoring engineers and contributing to system architecture decisions.
+Software Engineer with ~4 years of experience building high-availability distributed microservices using Java (8/17/21), Spring Boot, Kafka, and Kubernetes. Experienced in designing secure API gateway architectures, schema-based multitenancy solutions, and real-time transaction processing systems in the banking and payments domain. Hands-on expertise in cloud-native deployments on AWS and Azure, CI/CD automation, observability, and production reliability, along with mentoring engineers and contributing to system architecture decisions.
 
 
 ## Experience
@@ -34,8 +34,8 @@ Jun 2022 – Present
 
 - **Languages:** Java, JavaScript, TypeScript, SQL
 - **Backend:** Spring Framework (Spring Boot, Spring MVC, Spring Cloud, Spring Security), Hibernate/JPA, REST APIs, Maven
-- **Cloud & DevOps:** AWS, Azure, Docker, Kubernetes (AKS), CI/CD (Jenkins), Helm, Nexus, Nginx
-- **Databases & Cache:** PostgreSQL, Redis
+- **Cloud & DevOps:** AWS(EC2, S3, IAM, Lambda), Azure, Docker, Kubernetes (AKS), CI/CD (Jenkins), Helm, Nexus, Nginx
+- **Databases & Cache:** PostgreSQL, MySQL, Redis, NoSQL
 - **Messaging & Streaming:** Apache Kafka (KRaft)
 - **Core Java** : Object-Oriented Programming (OOP), Collections, Exception Handling, Multithreading & Concurrency
 - **Testing**: JUnit, Unit Testing, Integration Testing

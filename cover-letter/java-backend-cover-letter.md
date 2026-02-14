@@ -4,7 +4,7 @@ Mumbai, India
 
 ---
 
-**Subject: Application for Java Backend Engineer Role**
+**Subject: Application for Software Engineer Role**
 
 Dear Hiring Manager,
 
@@ -18,5 +18,8 @@ I am excited about the opportunity to contribute my backend engineering expertis
 
 Thank you for your time and consideration.
 
-Sincerely,  
-**Pratik Chandlekar**
+Sincerely,<br>
+**Pratik Chandlekar**<br>
+Mumbai, India<br>
++91 9075467719<br>
+pratikchandlekar280@gmail.com

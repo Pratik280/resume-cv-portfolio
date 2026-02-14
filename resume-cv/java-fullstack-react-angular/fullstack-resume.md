@@ -8,7 +8,7 @@ Software Engineer | Mumbai, India
 ## Summary
 
 Java Full-Stack Software Engineer with 3.9 years of experience designing and building
-scalable distributed systems and end-to-end web applications using Java (8/11/17),
+scalable distributed systems and end-to-end web applications using Java (8/17/21),
 Spring Boot microservices, and modern frontend frameworks including React and Angular.
 Experienced in developing high-availability transaction-processing platforms in the
 banking and payments domain, building RESTful APIs, responsive UI components, and
