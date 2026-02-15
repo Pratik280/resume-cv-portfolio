@@ -7,7 +7,7 @@ Software Engineer | Mumbai, India
 
 ## Summary
 
-Java Full-Stack Software Engineer with 3.9 years of experience designing and building
+Java Full-Stack Software Engineer with ~4 years of experience designing and building
 scalable distributed systems and end-to-end web applications using Java (8/17/21),
 Spring Boot microservices, and modern frontend frameworks including React and Angular.
 Experienced in developing high-availability transaction-processing platforms in the
@@ -32,9 +32,8 @@ Jun 2022 – Present
 - Built real-time transaction monitoring platform using Spring Boot microservices, PostgreSQL, Redis caching, and Kafka streaming, supporting low-latency dashboard APIs.
 - Migrated Kafka clusters from ZooKeeper to KRaft mode, configuring a 3-node combined controller–broker cluster and implementing producer/consumer integrations across microservices.
 - Implemented secure microservices architecture using Spring Cloud Gateway, Eureka service discovery, RBAC authorization filters, and Nginx load-balanced gateway clusters.
-- Built CI/CD pipelines using Jenkins, Maven, Docker, and Nexus, enabling automated containerized deployments to Azure Kubernetes Service (AKS) via Helm.
-- Integrated centralized logging and observability using ELK, Prometheus, and Grafana dashboards for multi-service production monitoring.
-- Mentored junior engineers, conducted code reviews, and contributed to system architecture and scalability design discussions.
+- Implemented GitOps pipelines where Helm commits triggered Argo CD automated AKS deployments, using Jenkins, Docker, and Nexus, with Prometheus–Grafana monitoring.
+- Mentored junior engineers, conducted code reviews, and contributed to system architecture and scalability design discussions while working in an Agile/Scrum environment, actively participating in sprint planning, backlog grooming, and architecture discussions.
 
 </div>
 
@@ -45,11 +44,12 @@ Jun 2022 – Present
 - **Languages:** Java, JavaScript, TypeScript, SQL
 - **Backend:** Spring Framework (Spring Boot, Spring MVC, Spring Cloud, Spring Security), Hibernate/JPA, REST APIs, Maven
 - **Frontend:** Angular, React JS, HTML5, CSS3, REST API Integration
-- **Cloud & DevOps:** AWS, Azure, Docker, Kubernetes (AKS), Jenkins, Helm, Nexus, Nginx
+- **Cloud & DevOps:** AWS(EC2, S3, IAM, Lambda), Azure, Docker, Kubernetes (AKS), CI/CD (Jenkins), Helm, Nexus, Nginx
 - **Databases & Cache:** PostgreSQL, Redis
-- **Messaging & Streaming:** Apache Kafka (KRaft)
+- **Messaging & Streaming:** Apache Kafka (KRaft), Event-driven architecture, Publisher–Subscriber patterns, Message partitioning, Consumer groups, Offset management
 - **Core Java** : Object-Oriented Programming (OOP), Collections, Exception Handling, Multithreading & Concurrency
 - **Testing**: JUnit, Unit Testing, Integration Testing
+- **AI & Productivity Tools:** Generative AI tools (ChatGPT, GitHub Copilot), prompt engineering, LLM-assisted development, basic RAG architecture concepts
 - **Observability:** ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus, Grafana
 - **OS & Tools** : Linux, Bash, Git, ChatGPT, Copilot
 - **Practices** : Agile/Scrum, Software Development Life Cycle (SDLC)
