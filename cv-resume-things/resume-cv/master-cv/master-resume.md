@@ -34,9 +34,9 @@ Jun 2022 – Present
 - **Languages:** Java, JavaScript, TypeScript, SQL
 - **Backend:** Spring Framework (Spring Boot, Spring MVC, Spring Cloud, Spring Security), Hibernate/JPA, REST APIs, Maven
 - **Cloud & DevOps:** AWS(EC2, S3, IAM, Lambda), Azure, Docker, Kubernetes (AKS), CI/CD (Jenkins), Helm, Nexus, Nginx
-- **Databases & Cache:** PostgreSQL, MySQL, Redis, NoSQL
+- **Databases & Cache:** ostgreSQL, MySQL, Redis
 - **Messaging & Streaming:** Apache Kafka (KRaft), Event-driven architecture, Publisher–Subscriber patterns, Message partitioning, Consumer groups
-- **Core Java** : Object-Oriented Programming (OOP), Collections, Exception Handling, Multithreading & Concurrency
+- **Core Java:** Object-Oriented Programming (OOP), Collections, Exception Handling, Multithreading & Concurrency, JVM Internals, Design Patterns (Singleton, Factory, Strategy, Builder), Data Structures
 - **Testing**: JUnit, Unit Testing, Integration Testing
 - **Observability:** ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus, Grafana
 - **Frontend:** Angular, React JS, HTML5, CSS3
