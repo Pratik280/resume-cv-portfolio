@@ -2,7 +2,7 @@
 
 ---
 
-## 1. Java Basics & Core Concepts
+## Java Basics & Core Concepts
 
 - What is Java?
 - What are the features of Java?
@@ -21,7 +21,7 @@
 
 ---
 
-## 2. JVM, JDK, JRE & Memory
+## JVM, JDK, JRE & Memory
 
 - What is JVM and why is it important?
 - Difference between JDK, JRE, and JVM
@@ -34,7 +34,7 @@
 
 ---
 
-## 3. Garbage Collection & Memory Management
+## Garbage Collection & Memory Management
 
 - How does garbage collection work in Java?
 - What algorithm does JVM use for garbage collection?
@@ -43,7 +43,7 @@
 
 ---
 
-## 4. Data Types & Wrapper Classes
+## Data Types & Wrapper Classes
 
 - Difference between primitive and non-primitive data types
 - Can we declare pointers in Java?
@@ -56,7 +56,7 @@
 
 ---
 
-## 5. Exception Handling
+## Exception Handling
 
 - What is Exception?
 - What is Exception Handling?
@@ -76,7 +76,7 @@
 
 ---
 
-## 6. Strings & Immutability
+## Strings & Immutability
 
 - What is String pool?
 - Difference between String, StringBuilder, StringBuffer
@@ -89,7 +89,7 @@
 
 ---
 
-## 7. OOP Concepts (Deep Dive)
+## OOP Concepts (Deep Dive)
 
 - What is inheritance in Java?
 - Why multiple inheritance is not allowed?
@@ -106,7 +106,7 @@
 
 ---
 
-## 8. Constructors & Object Creation
+## Constructors & Object Creation
 
 - What is a constructor?
 - Can constructors be overloaded?
@@ -115,7 +115,7 @@
 
 ---
 
-## 9. Access Modifiers & Keywords
+## Access Modifiers & Keywords
 
 - What are access modifiers?
 - Can a top-level class be private or protected?
@@ -129,7 +129,7 @@
 
 ---
 
-## 10. Singleton & Design Patterns
+## Singleton & Design Patterns
 
 - What is Singleton class?
 - How to create Singleton class?
@@ -141,7 +141,7 @@
 
 ---
 
-## 11. Collections Framework
+## Collections Framework
 
 - What is Java Collections Framework?
 - Enhancements in Collections in Java 8
@@ -162,7 +162,7 @@
 
 ---
 
-## 12. Concurrency & Multithreading
+## Concurrency & Multithreading
 
 - What is a thread?
 - What is multithreading?
@@ -178,7 +178,7 @@
 
 ---
 
-## 13. Java 8+ Features
+## Java 8+ Features
 
 - What are new features in Java 8?
 - What is functional interface?
@@ -194,7 +194,7 @@
 
 ---
 
-## 14. Modern Java Versions
+## Modern Java Versions
 
 - What are new features in Java 11?
 - What are new features in Java 17?
@@ -209,12 +209,12 @@
 - Generic class and generic method.
 - What is wildcard?
 - What is Type Erasure?
-- Difference between List<Object> and List<?>
-- What is upper/lower bounded exdends/super wildcard?
+- Difference between `List<Object>` and `List<?>`
+- What is upper/lower bounded `extends` / `super` wildcard?
 
 ---
 
-## 18. Experience & Scenario-Based Questions
+## Experience & Scenario-Based Questions
 
 - Explain your project architecture
 - Explain how your microservices communicate
@@ -226,5 +226,3 @@
 - Explain concurrency issues you handled
 - Explain your CI/CD pipeline
 - Explain your deployment architecture
-
----
