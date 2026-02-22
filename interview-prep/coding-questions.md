@@ -1,6 +1,4 @@
-# Top 25 Java Coding Interview Questions (Master List – Backend, 4 YOE)
-
-Covers service companies (TCS, Infosys, Accenture, HCL, Deloitte, EPAM) and product companies.
+# Java Coding Interview Questions
 
 ---
 

@@ -1,4 +1,4 @@
-# Java Interview Questions (4 Year Experience) — Grouped, Most Asked
+# Java Interview Questions
 
 ---
 

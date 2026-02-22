@@ -1,6 +1,4 @@
-# Spring Boot Interview Questions (Top 25 – Most Asked, 4 YOE)
-
-Covers TCS, Infosys, Accenture, Deloitte, EPAM, HCL, NICE, Accelya, and product companies.
+# Spring Boot Interview Questions
 
 ---
 
