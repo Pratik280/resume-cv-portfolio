@@ -203,15 +203,15 @@
 
 ---
 
-## 15. Database & SQL (Common for Java Interviews)
+## Generics / Wildcard / Diamond brackets
 
-- How to fetch odd rows in SQL?
-- How to copy rows from one table to another?
+- What is generics and why generics were introduced?
+- Generic class and generic method.
+- What is wildcard?
+- What is Type Erasure?
+- Difference between List<Object> and List<?>
+- What is upper/lower bounded exdends/super wildcard?
 
----
-
-
----
 
 ## 18. Experience & Scenario-Based Questions
 
