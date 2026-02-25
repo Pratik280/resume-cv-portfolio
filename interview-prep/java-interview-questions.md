@@ -129,15 +129,12 @@
 
 ---
 
-## Singleton & Design Patterns
+## Singleton 
 
 - What is Singleton class?
 - How to create Singleton class?
 - Are Singleton implementations thread-safe?
-- What is fail-fast and fail-safe iterator?
-- What is idempotency?
-- What is Circuit Breaker Design Pattern?
-- How have you implemented Circuit Breaker using Resilience4j?
+
 
 ---
 
@@ -157,8 +154,11 @@
 - HashMap vs TreeMap
 - Using objects/classes as keys in maps
 - How to choose the right collection?
+
+- Haspmap vs ConcurrentHashMap
 - How ConcurrentHashMap works internally?
 - Difference between ConcurrentHashMap before and after Java 8
+- What is fail-fast and fail-safe iterator?
 
 ---
 
@@ -226,3 +226,11 @@
 - Explain concurrency issues you handled
 - Explain your CI/CD pipeline
 - Explain your deployment architecture
+
+--- 
+
+## Design Patterns
+
+- What is idempotency?
+- What is Circuit Breaker Design Pattern?
+- How have you implemented Circuit Breaker using Resilience4j?
