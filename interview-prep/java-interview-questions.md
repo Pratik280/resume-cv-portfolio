@@ -2,6 +2,19 @@
 
 ---
 
+## Strings & Immutability
+
+- What is String pool?
+- Difference between String, StringBuilder, StringBuffer
+- Why is String immutable?
+- String literal vs String object
+- When is StringBuffer better than String?
+- What does immutability mean?
+- How to create an immutable class?
+- String.join() use
+
+---
+
 ## Java Basics & Core Concepts
 
 - What is Java?
@@ -73,19 +86,6 @@
 - Custom Exception
 - Performance impact of exception handling
 - Difference between Throwable and Exception
-
----
-
-## Strings & Immutability
-
-- What is String pool?
-- Difference between String, StringBuilder, StringBuffer
-- Why is String immutable?
-- String literal vs String object
-- When is StringBuffer better than String?
-- What does immutability mean?
-- How to create an immutable class?
-- String.join() use
 
 ---
 
