@@ -19,13 +19,19 @@ to system architecture decisions.
 
 
 
+## Summary
+
+Software Engineer with ~4 years of experience building high-availability distributed microservices using Java (8/17/21), Spring Boot, Kafka, and Kubernetes. Experienced in designing secure API gateway architectures, schema-based multitenancy solutions, and real-time transaction processing systems in the banking and payments domain. Hands-on expertise in cloud-native deployments on AWS and Azure, CI/CD automation, observability, and production reliability, along with mentoring engineers and contributing to system architecture decisions.
+
+
 ## Experience
 <div class="experience">
 
 **Software Engineer — In-Solution Global | Mumbai**  
 Jun 2022 – Present
 
-- Developed production-grade Spring Boot microservices and REST APIs using Spring MVC, Spring Data JPA, Hibernate, DTO-based layered architecture, and global exception handling frameworks 
+
+- Developed production-grade Spring Boot microservices and REST APIs using Spring MVC, Spring Data JPA, and Hibernate, implementing a layered architecture (Controller–Service–DAO) with DTO mapping, request validation, structured logging, and custom/global exception handling. Designed APIs for payment link and transaction management with pagination, filtering, and parameter-based querying. Integrated Apache Kafka-based event-driven processing by building Kafka producers and consumers using KafkaTemplate and @KafkaListener, enabling asynchronous transaction ingestion and persistence with JSON serialization, consumer groups, and robust error handling for high-volume financial transaction systems.
 - Designed schema-based multitenancy using Hibernate JPA after evaluating database sharding trade-offs, enabling secure client-level data isolation within a single application instance.
 - Developed a real-time monitoring dashboard as part of a Java full-stack application using React.js and Spring Boot REST APIs, integrating Spring Boot Actuator to collect service health metrics and visualize transaction statistics, failure response codes, and system health across multiple datacenters, providing live status of microservices, payment rails, Kafka, and datastores (PostgreSQL, Redis) for proactive monitoring of distributed systems.
 - Designed and implemented a multi–data center Apache Kafka (KRaft mode) cluster spanning DC1 and DC2 (6 brokers total), replacing legacy ZooKeeper-based dual clusters with MirrorMaker. Implemented rack-aware replica placement (dc1/dc2), replication factor 6 with min.insync.replicas=4 for cross-DC durability, and DNS-based advertised listeners (kafka-local, kafka-remote) with client rack affinity to ensure zone-local connectivity, controlled failover, and improved operational simplicity. 
@@ -49,7 +55,7 @@ Jun 2022 – Present
 - **Core Java:** Object-Oriented Programming (OOP), Collections, Exception Handling, Multithreading & Concurrency, JVM Internals, Design Patterns (Singleton, Factory, Strategy, Builder), Data Structures
 - **Testing**: JUnit, Unit Testing, Integration Testing
 - **Observability:** ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus, Grafana
-- **Frontend:** Angular, React JS, HTML5, CSS3
+- **Frontend:** React JS, Angular, HTML5, CSS3
 - **OS & Tools** : Linux, Bash, Git, Claude, ChatGPT, Copilot
 - **Practices** : Agile/Scrum, Software Development Life Cycle (SDLC)
 
