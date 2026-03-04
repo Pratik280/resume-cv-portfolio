@@ -34,7 +34,7 @@ Jun 2022 – Present
 
 
 - **Languages:** Java, JavaScript, TypeScript, SQL
-- **Backend:** Spring Framework (Spring Boot, Spring MVC, Spring Cloud, Spring Security), Hibernate/JPA, REST APIs, Maven, BFSI
+- **Backend:** Spring Framework (Spring Boot, Spring MVC, Spring Cloud, Spring Security), Hibernate/JPA, REST APIs, Maven, JSON, HTTP, BFSI
 - **Cloud & DevOps:** AWS(EC2, S3, IAM, Lambda), Azure, Docker, Kubernetes (AKS), CI/CD (Jenkins), Helm, Nexus, Nginx
 - **Databases & Cache:** PostgreSQL, MySQL, Redis
 - **Messaging & Streaming:** Apache Kafka (KRaft), Event-driven architecture, Publisher–Subscriber patterns, Message partitioning, Consumer groups
