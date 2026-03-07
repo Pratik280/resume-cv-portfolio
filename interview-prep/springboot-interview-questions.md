@@ -49,14 +49,16 @@
 
 ---
 
-## 6. Exception Handling and Validation
+## 8. Transactions, Caching, and Performance
 
-- How exception handling works using @ExceptionHandler and @ControllerAdvice
-- How validation works using @Valid, @NotNull, @NotBlank
+- How transaction management works using @Transactional
+- How caching works using Redis and @Cacheable
+- How database connection pooling works using HikariCP
+- How Spring Boot handles multiple concurrent requests (threading model)
 
 ---
 
-## 7. Microservices Core Concepts (VERY FREQUENT)
+## 7. Microservices Core Concepts (VERY FREQUENT) & Kafka, redis
 
 - How Spring Boot is used to build microservices
 - How microservices communicate using RestTemplate, WebClient, or Feign Client
@@ -65,12 +67,10 @@
 
 ---
 
-## 8. Transactions, Caching, and Performance
+## 6. Exception Handling and Validation
 
-- How transaction management works using @Transactional
-- How caching works using Redis and @Cacheable
-- How Spring Boot handles multiple concurrent requests (threading model)
-- How database connection pooling works using HikariCP
+- How exception handling works using @ExceptionHandler and @ControllerAdvice
+- How validation works using @Valid, @NotNull, @NotBlank
 
 ---
 
@@ -82,9 +82,9 @@
 
 ## 10. Production and Deployment (MOST IMPORTANT FOR 4 YOE)
 
+- How Spring Boot integrates with Kafka and Redis in production
 - How Spring Boot application is deployed using jar, Docker, and Kubernetes
 - How Spring Boot works behind Nginx or load balancer
-- How Spring Boot integrates with Kafka and Redis in production
 
 ---
 
