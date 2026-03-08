@@ -64,6 +64,8 @@
 - How microservices communicate using RestTemplate, WebClient, or Feign Client
 - What is service discovery (Eureka Server and Client) and how load balancing works
 - What is API Gateway and its role in microservices
+- Idempotency
+- CircuitBreaker resilince4j
 
 ---
 
