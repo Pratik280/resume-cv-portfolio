@@ -168,7 +168,8 @@
 - What is multithreading?
 - Difference between Runnable and Thread
 - Thread safety techniques in Java
-- What is synchronized keyword? and what is wait(), notify() and notifyAll() and their use cases
+- What is synchronized keyword? 
+- What is wait(), notify() and notifyAll() and their use cases. What is producer consumer problem
 - What is lock Reentrantlock
 - What is atomic class -> AtomicInteger
 - What is Concurrent collections -> ConcurrentHashMap
@@ -178,7 +179,6 @@
 - What is Exchanger class?
 - What is volatile keyword in multithreading?
 - What is Java Memory Model in multithreading?
-- what is producer consumer problem
 - What is Callable, Callable vs Runnable
 - What is Executor Framework, How it is used in your project? use of Runnable with Executor framework.
 
