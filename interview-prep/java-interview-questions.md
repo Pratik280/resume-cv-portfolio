@@ -179,6 +179,7 @@
 - What is Exchanger class?
 - What is volatile keyword in multithreading?
 - What is Java Memory Model in multithreading?
+- what is producer consumer problem
 
 ---
 
