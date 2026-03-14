@@ -180,6 +180,8 @@
 - What is volatile keyword in multithreading?
 - What is Java Memory Model in multithreading?
 - what is producer consumer problem
+- What is Callable, Callable vs Runnable
+- What is Executor Framework, How it is used in your project? use of Runnable with Executor framework.
 
 ---
 
