@@ -169,6 +169,10 @@
 - Difference between Runnable and Thread
 - Thread safety techniques in Java
 - What is synchronized keyword?
+- What is lock Reentrantlock
+- What is atomic class -> AtomicInteger
+- What is Concurrent collections -> ConcurrentHashMap
+- What is immutable objects
 - wait() and notify() use cases
 - Challenges in multithreading
 - How to handle concurrent updates
