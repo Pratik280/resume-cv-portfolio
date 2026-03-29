@@ -299,14 +299,22 @@ public void publishEvents() {
     List<OutboxEvent> events = outboxRepository.findByStatus("NEW");
 
     for (OutboxEvent event : events) {
-        try {
-            kafkaTemplate.send("merchant-config-events", event.getPayload());
-            event.setStatus("SENT");
-        } catch (Exception e) {
-            event.setStatus("FAILED");
-        }
 
-        outboxRepository.save(event);
+        kafkaTemplate.send("merchant-config-events", event.getPayload())
+            .whenComplete((result, ex) -> {
+
+                OutboxEvent updatedEvent = outboxRepository
+                        .findById(event.getId())
+                        .orElseThrow();
+
+                if (ex == null) {
+                    updatedEvent.setStatus("SENT");
+                } else {
+                    updatedEvent.setStatus("FAILED");
+                }
+
+                outboxRepository.save(updatedEvent);
+            });
     }
 }
 ```
