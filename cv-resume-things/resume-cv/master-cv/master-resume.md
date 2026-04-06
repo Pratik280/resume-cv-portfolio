@@ -7,7 +7,7 @@ Software Engineer | Mumbai, India
 
 ## Summary
 
-Backend Software Engineer with ~4 years of experience building scalable microservices and event-driven systems using Java, Spring Boot, and Apache Kafka. Experienced in designing secure, high-performance REST APIs, multitenant architectures, and real-time transaction processing systems. Contributed to system design discussions, code reviews, and delivery of reliable distributed systems, with exposure to cloud-native environments and modern deployment practices.
+Software Engineer with ~4 years of experience building scalable microservices and event-driven systems using Java, Spring Boot, and Apache Kafka. Experienced in designing secure, high-performance REST APIs, multitenant architectures, and real-time transaction processing systems. Contributed to system design discussions, code reviews, and delivery of reliable distributed systems, with exposure to cloud-native environments and modern deployment practices.
 
 
 ## Experience
