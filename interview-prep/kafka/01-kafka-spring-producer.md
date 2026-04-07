@@ -332,6 +332,16 @@ public void publish() {
         }
     }
 }
+
+```java
+@Query(value = """
+    SELECT * FROM outbox_event
+    WHERE status = 'NEW'
+    ORDER BY id
+    LIMIT :limit
+    FOR UPDATE SKIP LOCKED
+""", nativeQuery = true)
+List<OutboxEvent> fetchBatchForUpdate(@Param("limit") int limit);
 ```
 
 ---

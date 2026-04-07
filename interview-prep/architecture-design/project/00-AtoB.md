@@ -261,7 +261,7 @@ Kafka failed ❌
 CREATE TABLE outbox_events (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     event_type VARCHAR(50),
-    payload JSON,
+    payload JSON/TEXT,
     status VARCHAR(20),
     created_at TIMESTAMP
 );
@@ -296,7 +296,8 @@ public void disableMerchant(String merchantId) {
 @Scheduled(fixedDelay = 5000)
 public void publishEvents() {
 
-    List<OutboxEvent> events = outboxRepository.findByStatus("NEW");
+    // List<OutboxEvent> events = outboxRepository.findByStatus("NEW");
+    List<OutboxEvent> events = outboxRepository.fetchBatchForUpdate(10);
 
     for (OutboxEvent event : events) {
 
@@ -317,6 +318,17 @@ public void publishEvents() {
             });
     }
 }
+```
+
+```java
+@Query(value = """
+    SELECT * FROM outbox_event
+    WHERE status = 'NEW'
+    ORDER BY id
+    LIMIT :limit
+    FOR UPDATE SKIP LOCKED
+""", nativeQuery = true)
+List<OutboxEvent> fetchBatchForUpdate(@Param("limit") int limit);
 ```
 
 ---
