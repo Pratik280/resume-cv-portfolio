@@ -181,6 +181,7 @@
 - What is Java Memory Model in multithreading?
 - What is Callable, Callable vs Runnable
 - What is Executor Framework, How it is used in your project? use of Runnable with Executor framework.
+- CompletableFuture and callbacks (also Future)
 
 ---
 
@@ -240,3 +241,10 @@
 - What is idempotency?
 - What is Circuit Breaker Design Pattern?
 - How have you implemented Circuit Breaker using Resilience4j?
+
+--- 
+
+## Others
+- Serialization, Serilizable interface, Json and jvm to jvm serialization
+- Comparable Comparator
+- Generics & Wildcard

@@ -23,9 +23,12 @@
   padding-bottom: 1px;
 }
 
-#resume-preview h2,
-#resume-preview h3 {
+#resume-preview h2{
   font-size: 1.14em;
+}
+
+#resume-preview h3 {
+  font-size: 1.05em;
 }
 
 /* ===== Header ===== */

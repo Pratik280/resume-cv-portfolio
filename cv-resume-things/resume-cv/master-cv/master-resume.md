@@ -15,24 +15,21 @@ Software Engineer with ~4 years of experience building scalable microservices an
 **Software Engineer — In-Solution Global | Mumbai**  
 Jun 2022 – Present
 
-- Developed production-grade Spring Boot microservices and REST APIs using Spring MVC, Spring Data JPA, and Hibernate, implementing a layered architecture (Controller–Service–DAO) with DTO mapping, request validation, structured logging, and custom/global exception handling. Designed APIs for payment link and transaction management with pagination, filtering, and parameter-based querying.
+### Projects & Contributions:
 
-- Integrated Apache Kafka-based event-driven processing by building Kafka producers and consumers using KafkaTemplate and @KafkaListener, enabling asynchronous transaction ingestion and persistence with JSON serialization, consumer groups, and robust error handling for high-volume financial transaction systems.
+- **Designed and built a distributed payment processing platform across multiple Spring Boot microservices** — covering payment link creation, transaction management, and query APIs — using an event-driven Kafka pipeline where each service reacts independently to transaction events; multi-step payment workflows are coordinated via the Saga choreography pattern to maintain data consistency, and the Outbox pattern ensuring no events are lost between the database and Kafka.
 
-- Implemented the Saga pattern (choreography-based) for distributed transaction management across microservices using Apache Kafka. Designed domain events and asynchronous workflows where services independently react to Kafka events, ensuring eventual consistency for multi-step flows such as payment processing. Handled failures using compensating transactions, idempotent consumers, and retry mechanisms (DLQ), improving system resilience and fault tolerance.
+- **Architected a multi-tenant data layer supporting multiple clients on a single application instance** — isolating each client's data at the database schema level using Hibernate JPA; evaluated and chose schema-based multitenancy over database sharding after analyzing operational trade-offs.
 
-- Designed schema-based multitenancy using Hibernate JPA after evaluating database sharding trade-offs, enabling secure client-level data isolation within a single application instance.
+- **Built an internal monitoring platform aggregating real-time health and transaction data across multiple datacenters** — polling service health via Actuator, tracking Kafka consumer lag, and consuming transaction events to expose success rates and failure codes through a single dashboard API; data is collected via scheduled aggregation and cached in Redis, separating collection from serving for fast, scalable responses.
 
-- Developed a real-time monitoring system using Spring Boot REST APIs and Actuator, exposing service health metrics and transaction data. Enabled tracking of transaction statistics, failure response codes, and system health across multiple datacenters for proactive monitoring.
+- **Led the migration of the Kafka messaging infrastructure from a legacy ZooKeeper-based dual-cluster setup to a unified KRaft-mode 6-broker cluster spanning two datacenters** — configured rack-aware replication, replication factor 6 with min.insync.replicas=4, and DNS-based client routing, ensuring zero message loss even if one datacenter goes down.
 
-- Designed and implemented a multi–data center Apache Kafka (KRaft mode) cluster spanning DC1 and DC2 (6 brokers total), replacing legacy ZooKeeper-based dual clusters with MirrorMaker. Configured rack-aware replica placement (dc1/dc2), replication factor 6 with min.insync.replicas=4, and DNS-based advertised listeners for cross-DC durability and optimized client routing.
+- **Designed and deployed the API gateway layer for the microservices platform using a 3-node Spring Cloud Gateway cluster** — handling request routing, RBAC token validation via custom filters, and Eureka-based service discovery, ensuring new services can be onboarded without any changes to the client-facing entry point.
 
-- Architected a production-grade Spring Boot / Spring Cloud microservices ecosystem with Nginx reverse proxy and a 3-node Spring Cloud Gateway cluster. Implemented RBAC token validation via custom filters and leveraged Eureka for service discovery, ensuring scalability, fault tolerance, and high availability.
+- **Partnered with DevOps to build a fully automated end-to-end CI/CD pipeline triggered by GitLab tags** — on trigger, the pipeline spins up all microservices with their dependencies (Kafka, Redis, PostgreSQL) using Docker Compose, runs the full integration test suite, and only on success builds and pushes Docker images to the registry, updates Helm chart values in the repository, which triggers Argo CD to automatically deploy the updated services to the Kubernetes cluster; Prometheus and Grafana dashboards provide continuous observability post-deployment.
 
-- Collaborated with DevOps teams to implement GitOps-based CI/CD pipelines using Jenkins, Docker, Helm, Nexus, and Argo CD, enabling automated Kubernetes deployments with integrated observability via Prometheus and Grafana.
-
-- Mentored junior engineers, conducted code reviews, and contributed to system architecture and scalability discussions in an Agile/Scrum environment.
-
+- Mentored junior engineers through code reviews and design discussions, contributed to architectural decisions and actively participated in sprint planning and retrospectives within an Agile/Scrum delivery model.
 
 </div>
 
