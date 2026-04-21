@@ -154,7 +154,6 @@
 - HashMap vs TreeMap
 - Using objects/classes as keys in maps
 - How to choose the right collection?
-
 - Haspmap vs ConcurrentHashMap
 - How ConcurrentHashMap works internally?
 - Difference between ConcurrentHashMap before and after Java 8
@@ -181,7 +180,8 @@
 - What is Java Memory Model in multithreading?
 - What is Callable, Callable vs Runnable
 - What is Executor Framework, How it is used in your project? use of Runnable with Executor framework.
-- CompletableFuture and callbacks (also Future)
+- CompletableFuture and callbacks methods (also Future) 
+- Threadpooltaskexecutor
 
 ---
 
@@ -248,3 +248,5 @@
 - Serialization, Serilizable interface, Json and jvm to jvm serialization
 - Comparable Comparator
 - Generics & Wildcard
+- Enum (under the hood)
+- DRY

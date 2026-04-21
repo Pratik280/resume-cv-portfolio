@@ -19,7 +19,9 @@
 - Explain @Autowired, constructor injection, and why constructor injection is recommended
 - Explain Spring Bean lifecycle and how Spring creates and initializes beans
 - How Spring handles multiple beans of same type using @Qualifier and @Primary
+- Bean Scope
 
+- ()
 ---
 
 ## 3. Configuration and Profiles
@@ -55,6 +57,7 @@
 - How caching works using Redis and @Cacheable
 - How database connection pooling works using HikariCP
 - How Spring Boot handles multiple concurrent requests (threading model)
+- AOP ACID and Transactional Propagation
 
 ---
 
@@ -97,3 +100,8 @@
 - How you implemented exception handling, logging, and monitoring
 
 ---
+
+## 12. Extras
+
+- Idempotency
+- DRY
