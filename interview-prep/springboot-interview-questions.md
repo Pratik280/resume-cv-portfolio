@@ -21,7 +21,6 @@
 - How Spring handles multiple beans of same type using @Qualifier and @Primary
 - Bean Scope
 
-- ()
 ---
 
 ## 3. Configuration and Profiles
@@ -30,6 +29,14 @@
 - Difference between @Value and @ConfigurationProperties
 - What are Spring Profiles and how they are used in dev, test, and production
 
+Flow:
+A. Started
+B. Autoconfiguration
+C1. Tomcat
+C2. Properties
+D. IOC DI - DI types
+E. Flow of Autoconfig Springboot application start up
+F. Autowired, Primary, Qualifier
 ---
 
 ## 4. REST API and Request Flow (VERY IMPORTANT)
@@ -103,5 +110,6 @@
 
 ## 12. Extras
 
+- Actuator
 - Idempotency
 - DRY
