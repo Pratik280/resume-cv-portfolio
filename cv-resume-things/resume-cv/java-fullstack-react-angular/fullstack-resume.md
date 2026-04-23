@@ -7,8 +7,7 @@ Software Engineer | Mumbai, India
 
 ## Summary
 
-Software Engineer with ~4 years of experience building scalable microservices and event-driven systems using Java, Spring Boot, and Apache Kafka. Experienced in designing secure, high-performance REST APIs, multitenant architectures, and real-time transaction processing systems. Contributed to system design discussions, code reviews, and delivery of reliable distributed systems, with exposure to cloud-native environments and modern deployment practices.
-
+Software Engineer (Java FullStack) with ~4 years of experience building scalable microservices and event-driven systems using Java, Spring Boot, and Apache Kafka — with working exposure to React.js on the frontend. Experienced in designing secure, high-performance REST APIs, multitenant architectures, and real-time transaction processing systems. Contributed to system design, code reviews, and delivery of reliable distributed systems, with exposure to cloud-native environments and modern deployment practices.
 
 ## Experience
 <div class="experience">
@@ -16,17 +15,21 @@ Software Engineer with ~4 years of experience building scalable microservices an
 **Software Engineer — In-Solution Global | Mumbai**  
 Jun 2022 – Present
 
+### Projects & Contributions:
 
-- Developed production-grade Spring Boot microservices and REST APIs using Spring MVC, Spring Data JPA, and Hibernate, implementing a layered architecture (Controller–Service–DAO) with DTO mapping, request validation, structured logging, and custom/global exception handling. Designed APIs for payment link and transaction management with pagination, filtering, and parameter-based querying. Integrated Apache Kafka-based event-driven processing by building Kafka producers and consumers using KafkaTemplate and @KafkaListener, enabling asynchronous transaction ingestion and persistence with JSON serialization, consumer groups, and robust error handling for high-volume financial transaction systems.
-- Designed schema-based multitenancy using Hibernate JPA after evaluating database sharding trade-offs, enabling secure client-level data isolation within a single application instance.
-- Developed a real-time monitoring dashboard as part of a Java full-stack application using React.js and Spring Boot REST
-APIs, integrating Spring Boot Actuator to collect service health metrics and visualize transaction statistics, failure
-response codes, and system health across multiple datacenters, providing live status of microservices, payment rails,
-Kafka, and datastores (PostgreSQL, Redis) for proactive monitoring of distributed systems.
-- Designed and implemented a multi–data center Apache Kafka (KRaft mode) cluster spanning DC1 and DC2 (6 brokers total), replacing legacy ZooKeeper-based dual clusters with MirrorMaker. Implemented rack-aware replica placement (dc1/dc2), replication factor 6 with min.insync.replicas=4 for cross-DC durability, and DNS-based advertised listeners (kafka-local, kafka-remote) with client rack affinity to ensure zone-local connectivity, controlled failover, and improved operational simplicity. 
-- Architected a production-grade Spring Boot / Spring Cloud microservices architecture with Nginx reverse proxy (upstream load-balanced cluster) routing external traffic to a 3-node Spring Cloud Gateway cluster, implementing RBAC access-token validation via custom filters, and leveraging a peer-aware Eureka service discovery cluster for dynamic routing and inter-service communication, ensuring load balancing, fault tolerance, scalability, and high availability across microservices.
-- Collaborated with the DevOps team to implement GitOps-based CI/CD pipelines, where Helm chart commits triggered automated Kubernetes deployments via Argo CD, leveraging Jenkins, Docker, and Nexus, with Prometheus–Grafana monitoring for observability.
-- Mentored junior engineers, conducted code reviews, and contributed to system architecture and scalability design discussions while working in an Agile/Scrum environment, actively participating in sprint planning, backlog grooming, and architecture discussions.
+- **Designed and built a distributed payment processing platform across multiple Spring Boot microservices** — covering payment link creation, transaction management, and query APIs — using an event-driven Kafka pipeline where each service reacts independently to transaction events; multi-step payment workflows are coordinated via the Saga choreography pattern to maintain data consistency, and the Outbox pattern ensuring no events are lost between the database and Kafka.
+
+- **Architected a multi-tenant data layer supporting multiple clients on a single application instance** — isolating each client's data at the database schema level using Hibernate JPA; evaluated and chose schema-based multitenancy over database sharding after analyzing operational trade-offs.
+
+- **Built a full-stack real-time monitoring platform spanning multiple datacenters** — a React.js dashboard backed by Spring Boot REST APIs that aggregates service health via Actuator polling, tracks Kafka consumer lag, and consumes transaction events to expose success rates and failure codes; metrics are collected via scheduled aggregation, cached in Redis, and served through a single dashboard API, separating collection from serving for fast and scalable responses.
+
+- **Led the migration of the Kafka messaging infrastructure from a legacy ZooKeeper-based dual-cluster setup to a unified KRaft-mode 6-broker cluster spanning two datacenters** — configured rack-aware replication, replication factor 6 with min.insync.replicas=4, and DNS-based client routing, ensuring zero message loss even if one datacenter goes down.
+
+- **Designed and deployed the API gateway layer for the microservices platform using a 3-node Spring Cloud Gateway cluster** — handling request routing, RBAC token validation via custom filters, and Eureka-based service discovery, ensuring new services can be onboarded without any changes to the client-facing entry point.
+
+- **Partnered with DevOps to build a fully automated end-to-end CI/CD pipeline triggered by GitLab tags** — on trigger, the pipeline spins up all microservices with their dependencies (Kafka, Redis, PostgreSQL) using Docker Compose, runs the full integration test suite, and only on success builds and pushes Docker images to the registry, updates Helm chart values in the repository, which triggers Argo CD to automatically deploy the updated services to the Kubernetes cluster; Prometheus and Grafana dashboards provide continuous observability post-deployment.
+
+- Mentored junior engineers through code reviews and design discussions, contributed to architectural decisions and actively participated in sprint planning and retrospectives within an Agile/Scrum delivery model.
 
 </div>
 
@@ -37,14 +40,14 @@ Kafka, and datastores (PostgreSQL, Redis) for proactive monitoring of distribute
 
 
 - **Languages:** Java, JavaScript, TypeScript, SQL
-- **Backend:** Spring Framework (Spring Boot, Spring MVC, Spring Cloud, Spring Security), Hibernate/JPA, REST APIs, Maven, JSON, HTTP
-- **Cloud & DevOps:** AWS(EC2, S3, IAM, Lambda), Azure, Docker, Kubernetes (AKS), CI/CD (Jenkins), Helm, Nexus, Nginx
-- **Databases & Cache:** PostgreSQL, MySQL, Redis
-- **Messaging & Streaming:** Apache Kafka (KRaft), Event-driven architecture, Publisher–Subscriber patterns, Message partitioning, Consumer groups
-- **Core Java:** Object-Oriented Programming (OOP), Collections, Exception Handling, Multithreading & Concurrency
+- **Backend:** Spring Framework (Spring Boot, Spring MVC, Spring Cloud, Spring Security), Hibernate/JPA, REST APIs,RESTful APIs, Maven, JSON, HTTP
 - **Frontend:** React JS, Angular, HTML5, CSS3
+- **Cloud & DevOps:** AWS(EC2, S3, IAM, Lambda), Azure, Docker, Kubernetes (AKS),  GitLab CI/CD (Jenkins Continuous Integration and Continuous Delivery), Helm, Nexus, Nginx
+- **Databases & Cache:** PostgreSQL, MySQL, Redis
+- **Messaging & Streaming:** Apache Kafka (KRaft), Event-driven architecture, Saga Pattern (Choreography), Outbox Pattern, Publisher–Subscriber patterns, Message partitioning, Consumer groups
+- **Core Java:** Object-Oriented Programming (OOP), Collections, Exception Handling, Multithreading & Concurrency, SOLID Principles, J2EE
 - **Testing**: JUnit, Unit Testing, Integration Testing
-- **Observability:** ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus, Grafana
+- **Observability:** ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus, Grafana, Spring Boot Actuator
 - **OS & Tools** : Linux, Bash, Git, Claude, ChatGPT, Copilot
 - **Practices** : Agile/Scrum, Software Development Life Cycle (SDLC)
 

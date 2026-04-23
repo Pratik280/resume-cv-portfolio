@@ -1,23 +1,40 @@
-# Pratik Chandlekar  
-Mumbai, India  
-+91 9075467719 • pratikchandlekar280@gmail.com  
 
 ---
 
-**Subject: Application for Java Full-Stack Engineer Role**
+**Pratik Chandlekar**
+
+Mumbai, India | +91 9075467719 | pratikchandlekar280@gmail.com
+
+[LinkedIn](https://www.linkedin.com/in/pratik280) | [GitHub](https://github.com/Pratik280)
+
+---
+
+
+**Subject: Application for **[Job Title]** role at **[Company Name]**.**
 
 Dear Hiring Manager,
 
-I am excited to apply for the Java Full-Stack Engineer position at your organization. With 3.9+ years of experience building end-to-end enterprise applications using Java (8/11/17), Spring Boot microservices, and modern frontend frameworks such as React and Angular, I bring strong hands-on expertise across both backend services and frontend integrations.
+I am a Software Engineer with 4 years of experience designing and delivering production-grade backend systems for financial applications — and I am excited to apply for the **[Job Title]** role at **[Company Name]**.
 
-In my current role, I develop Spring Boot microservices, REST APIs, and responsive UI modules that power real-time transaction monitoring platforms. My experience includes designing scalable microservices architectures, implementing secure API gateways, integrating frontend dashboards with backend services, and building cloud-native deployments using Docker, Kubernetes, Jenkins, and CI/CD pipelines. I also work extensively with PostgreSQL, Redis, Kafka-based event streaming, and performance optimization for high-traffic applications.
+My work at In-Solution Global has been focused on one of the hardest problems in distributed systems: making financial transactions reliable, consistent, and observable at scale. I have built a distributed payment processing platform across multiple Spring Boot microservices, coordinating multi-step payment workflows using the Saga choreography pattern over Apache Kafka, with the Outbox pattern guaranteeing zero data loss between services. I did not just write code for these systems — I designed them from the ground up, made the architectural trade-off decisions, and saw them through to production.
 
-I enjoy collaborating across product, QA, and DevOps teams throughout the full software development lifecycle, contributing to architecture discussions, mentoring engineers, and ensuring the delivery of secure, scalable, and maintainable applications.
+A few things that set my experience apart:
 
-I would welcome the opportunity to bring my full-stack engineering expertise and problem-solving skills to your team. Thank you for your time and consideration.
+- **Distributed systems under real constraints** — I led the migration of our Kafka infrastructure from a legacy ZooKeeper dual-cluster to a unified KRaft-mode 6-broker multi-datacenter cluster, with rack-aware replication and min.insync.replicas=4, eliminating message loss risk across datacenters.
+- **Ownership across the stack** — from schema-based multitenancy design (evaluated against database sharding), to API gateway architecture with Spring Cloud Gateway, RBAC, and Eureka service discovery, I have worked at every layer of the system.
+- **Delivery discipline** — I partnered with DevOps to build a fully automated GitLab-triggered CI/CD pipeline where integration tests run against live Docker Compose environments before any artifact is built or deployed to Kubernetes via Argo CD.
+- **Observability as a first-class concern** — I built a full-stack monitoring platform with a React.js dashboard backed by Spring Boot REST APIs, aggregating service health, Kafka consumer lag, and real-time transaction metrics across datacenters into a single view; data is collected via scheduled aggregation and cached in Redis for fast, scalable responses.
 
-Sincerely,<br>
-**Pratik Chandlekar**<br>
+I hold an **AWS Certified Cloud Practitioner** certification and have hands-on experience with Kubernetes (AKS), Helm, Prometheus, Grafana, and the ELK stack in production environments.
+
+What I am looking for is a team that takes backend engineering seriously — where design decisions are debated, systems are built to last, and engineers are trusted to own their work end to end. If that describes your team, I would love to be part of it.
+
+I would welcome the opportunity to discuss how my experience aligns with what you are building.
+
+Warm regards,
+
+**Pratik Chandlekar**
+
 Mumbai, India<br>
 +91 9075467719<br>
 pratikchandlekar280@gmail.com

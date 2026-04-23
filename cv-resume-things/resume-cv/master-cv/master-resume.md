@@ -40,13 +40,13 @@ Jun 2022 – Present
 
 
 - **Languages:** Java, JavaScript, TypeScript, SQL
-- **Backend:** Spring Framework (Spring Boot, Spring MVC, Spring Cloud, Spring Security), Hibernate/JPA, REST APIs, Maven, JSON, HTTP
-- **Cloud & DevOps:** AWS(EC2, S3, IAM, Lambda), Azure, Docker, Kubernetes (AKS), CI/CD (Jenkins), Helm, Nexus, Nginx
+- **Backend:** Spring Framework (Spring Boot, Spring MVC, Spring Cloud, Spring Security), Hibernate/JPA, REST APIs,RESTful APIs, Maven, JSON, HTTP
+- **Cloud & DevOps:** AWS(EC2, S3, IAM, Lambda), Azure, Docker, Kubernetes (AKS),  GitLab CI/CD (Jenkins Continuous Integration and Continuous Delivery), Helm, Nexus, Nginx
 - **Databases & Cache:** PostgreSQL, MySQL, Redis
-- **Messaging & Streaming:** Apache Kafka (KRaft), Event-driven architecture, Saga Pattern (Choreography), Publisher–Subscriber patterns, Message partitioning, Consumer groups
-- **Core Java:** Object-Oriented Programming (OOP), Collections, Exception Handling, Multithreading & Concurrency
+- **Messaging & Streaming:** Apache Kafka (KRaft), Event-driven architecture, Saga Pattern (Choreography), Outbox Pattern, Publisher–Subscriber patterns, Message partitioning, Consumer groups
+- **Core Java:** Object-Oriented Programming (OOP), Collections, Exception Handling, Multithreading & Concurrency, SOLID Principles, J2EE
 - **Testing**: JUnit, Unit Testing, Integration Testing
-- **Observability:** ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus, Grafana
+- **Observability:** ELK Stack (Elasticsearch, Logstash, Kibana), Prometheus, Grafana, Spring Boot Actuator
 - **OS & Tools** : Linux, Bash, Git, Claude, ChatGPT, Copilot
 - **Practices** : Agile/Scrum, Software Development Life Cycle (SDLC)
 
