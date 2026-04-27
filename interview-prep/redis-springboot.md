@@ -437,6 +437,8 @@ public User getUser(String id) {
 
 > Cache Aside is a caching pattern where the application first checks the cache, and on a miss, fetches data from the database and updates the cache. It is simple and widely used for read-heavy systems.
 
+> Cache Aside is widely used because it improves performance by serving most requests from cache while reducing load on the database. It provides flexibility, as the application controls what and when to cache, and keeps the system decoupled since the database remains the source of truth. It is simple to implement and works well for read-heavy systems, which makes it a common choice in real-world architectures.
+
 ---
 
 ## 🔥 2. Cache Stampede
@@ -473,6 +475,97 @@ At 10:00:
 ### 🔹 Solutions
 
 * Random TTL (spread expiry)
+
+## 🔹 Random TTL (Spread Expiry) — How it works
+
+### 🔹 Idea
+
+Instead of giving every key the **same TTL**, you add a small **random offset (jitter)**.
+
+```text
+TTL = baseTTL + random(0 → jitter)
+```
+
+---
+
+### 🔹 Why this helps
+
+Without random TTL:
+
+```text
+user:1 → expires at 10:00  
+user:2 → expires at 10:00  
+user:3 → expires at 10:00  
+```
+
+👉 All expire together → sudden DB spike (stampede)
+
+---
+
+With random TTL:
+
+```text
+user:1 → 10:01  
+user:2 → 10:03  
+user:3 → 10:07  
+```
+
+👉 Expiry is spread → load distributed
+
+---
+
+### 🔹 How to Implement (RedisTemplate)
+
+### Generic method
+
+```java
+public void setWithRandomTTL(String key, Object value,
+                            long baseTtl, long jitter,
+                            TimeUnit unit) {
+
+    long random = ThreadLocalRandom.current().nextLong(0, jitter + 1);
+    long finalTtl = baseTtl + random;
+
+    redisTemplate.opsForValue().set(key, value, finalTtl, unit);
+}
+```
+
+---
+
+### Usage example
+
+```java
+setWithRandomTTL(key, value, 10, 5, TimeUnit.MINUTES);
+```
+
+👉 Means:
+
+* Minimum TTL = 10 min
+* Maximum TTL = 15 min
+
+---
+
+## 🔹 Key Points
+
+* `baseTtl` → minimum lifetime
+* `jitter` → randomness range
+* Always keep jitter **small relative to base TTL**
+
+---
+
+## 🔹 Important Reality
+
+* Random TTL **reduces probability of stampede**
+* It does **not eliminate it completely**
+
+👉 For strong protection, combine with:
+
+* locking (`setIfAbsent`)
+* retry/backoff
+
+> Random TTL is used to prevent cache stampede by adding a small random offset to the cache expiry time. Instead of all keys expiring at the same time, their expiration is spread out, which prevents a sudden spike of database requests. It is typically implemented by adding jitter to a base TTL when setting values in Redis.
+
+
 * Locking (only one request fetches DB)
 * Cache pre-warming
 
