@@ -1,24 +1,122 @@
 ---
 
-# 🧠 Spring Boot + Redis + Dev Setup (Complete Interview Notes)
+# 🧠 Spring Boot + Redis Caching (Final Interview Notes)
 
 ---
 
 # 🔹 Overview
 
 * Spring caching abstraction: **Spring Cache**
-* Redis integration via: **Spring Data Redis**
-* Used for:
+* Redis integration: **Spring Data Redis**
 
-  * reducing DB calls
-  * improving latency
-  * distributed system use cases
+👉 Why we use Redis:
+
+* Reduce DB calls
+* Cache external API / microservice responses
+* Improve latency
+* Handle distributed use cases (locks, counters, sessions)
 
 ---
 
-# 🔹 Enable Caching
+# 🔹 1. Add Redis Dependency
 
-```java id="9a1m6y"
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-redis</artifactId>
+</dependency>
+```
+
+👉 Uses **Lettuce** by default (non-blocking, production-friendly)
+
+---
+
+# 🔹 2. Configure Redis Connection
+
+### ✅ application.yml (most common)
+
+```yaml
+spring:
+  redis:
+    host: localhost
+    port: 6379
+```
+
+---
+
+### ✅ OR Java Config
+
+```java
+@Bean
+public RedisConnectionFactory redisConnectionFactory() {
+    return new LettuceConnectionFactory("localhost", 6379);
+}
+```
+
+---
+
+# 🔹 3. Do We Need RedisTemplate Bean?
+
+## ❗ Key Interview Concept
+
+👉 **No, not mandatory**
+
+Spring Boot auto-configures:
+
+* `RedisConnectionFactory`
+* `RedisTemplate<Object, Object>`
+* `StringRedisTemplate`
+
+So this works without any custom bean.
+
+---
+
+## ⚠️ But in Real Systems → You SHOULD create one
+
+### Problem with default:
+
+* Uses **Java serialization (binary)**
+* Not readable
+* Can break across versions
+* Hard to debug
+
+---
+
+## ✅ Recommended Production Config
+
+```java
+@Bean
+public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
+
+    RedisTemplate<String, Object> template = new RedisTemplate<>();
+    template.setConnectionFactory(factory);
+
+    template.setKeySerializer(new StringRedisSerializer());
+    template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+
+    return template;
+}
+```
+
+👉 Now data in Redis is JSON → readable + portable
+
+---
+
+## 🔹 When is custom RedisTemplate needed?
+
+| Scenario              | Needed? |
+| --------------------- | ------- |
+| Only @Cacheable       | ❌ No    |
+| Simple apps           | ❌ No    |
+| Production            | ✅ Yes   |
+| Debugging Redis       | ✅ Yes   |
+| Cross-service sharing | ✅ Yes   |
+
+---
+
+# 🔹 4. Enable Caching
+
+```java
 @EnableCaching
 @SpringBootApplication
 public class Application {}
@@ -26,192 +124,255 @@ public class Application {}
 
 ---
 
-# 🔹 Cache Annotations
+# 🔹 5. Cache Annotations (Core)
+
+---
 
 ## 🔸 @Cacheable (Read → Cache if missing)
 
-```java id="3jexnf"
+### Concept
+
+* First call → actual execution (DB/API)
+* Next calls → Redis
+* Method is **skipped on cache hit**
+
+---
+
+## Example 1: DB Call
+
+```java
 @Cacheable(value = "users", key = "#id")
 public User getUserById(String id) {
     return userRepository.findById(id).orElse(null);
 }
 ```
 
-### ✅ Behavior
+---
 
-* First call → DB hit → cache result
-* Next calls → return from cache
-* Method NOT executed on cache hit
+## Example 2: REST Call (Microservice via RestTemplate)
+
+```java
+@Cacheable(value = "userProfile", key = "#userId")
+public UserProfile getUserProfile(String userId) {
+    return restTemplate.getForObject(
+        "http://user-service/api/users/" + userId,
+        UserProfile.class
+    );
+}
+```
+
+👉 Avoids repeated network calls
 
 ---
 
-## 🔸 @CacheEvict (Remove Cache)
+## Example 3: Feign Client (REAL-WORLD MICROservices)
 
-```java id="2z2y83"
-@CacheEvict(value = "users", key = "#id")
-public void deleteUser(String id) {
-    userRepository.deleteById(id);
+Feign: **OpenFeign**
+
+---
+
+### Feign Client
+
+```java
+@FeignClient(name = "config-service")
+public interface ConfigClient {
+
+    @GetMapping("/config/merchant/{id}")
+    MerchantConfig getMerchantConfig(@PathVariable("id") String id);
 }
 ```
 
 ---
 
-## 🔸 @CachePut (Update Cache)
+### Service Layer (Caching applied)
 
-```java id="6h9s6s"
-@CachePut(value = "users", key = "#user.id")
-public User updateUser(User user) {
-    return userRepository.save(user);
+```java
+@Service
+public class ConfigService {
+
+    @Autowired
+    private ConfigClient configClient;
+
+    @Cacheable(value = "merchantConfig", key = "#merchantId")
+    public MerchantConfig getMerchantConfig(String merchantId) {
+        return configClient.getMerchantConfig(merchantId);
+    }
 }
 ```
 
 ---
 
-## 🔸 Differences
+## 🔍 What’s happening internally?
 
-| Annotation  | Behavior                    |
-| ----------- | --------------------------- |
-| @Cacheable  | Skip method if cache exists |
-| @CacheEvict | Remove cache                |
-| @CachePut   | Update cache                |
+1. First request:
 
----
+   * Calls `config-service`
+   * Stores result in Redis
 
-## 🔸 Evict All
+   ```
+   merchantConfig::123 → JSON(MerchantConfig)
+   ```
 
-```java id="0h7v8c"
-@CacheEvict(value = "users", allEntries = true)
-public void clearCache() {}
-```
+2. Next request:
 
----
-
-## 🔸 Conditional Caching
-
-```java id="3xk0qv"
-@Cacheable(value = "users", key = "#id", condition = "#id.length() > 3")
-```
-
-```java id="b7paz7"
-@Cacheable(value = "users", key = "#id", unless = "#result == null")
-```
+   * Directly served from Redis
+   * No network call
 
 ---
 
-# 🔹 Redis Behind the Scenes
+## 🎯 Why this is important
 
-```
-cacheName::key
-```
+* Reduces inter-service latency
+* Prevents overload on downstream services
+* Improves resilience
 
-Example:
+---
 
-```
-users::101 → {"id":101,"name":"Pratik"}
+# 🔹 6. @CacheEvict (Remove stale cache)
+
+### When data changes → cache must be cleared
+
+---
+
+## Example (Feign update)
+
+```java
+@CacheEvict(value = "merchantConfig", key = "#merchantId")
+public void updateMerchantConfig(String merchantId, MerchantConfig config) {
+    configClient.updateConfig(merchantId, config);
+}
 ```
 
 ---
 
-# 🔹 TTL (Time To Live)
+👉 Without eviction:
 
-```yaml id="g3g6e1"
+* Redis returns **old data ❌**
+
+👉 With eviction:
+
+* Next call fetches fresh data ✅
+
+---
+
+# 🔹 7. @CachePut (Update cache directly)
+
+```java
+@CachePut(value = "merchantConfig", key = "#merchantId")
+public MerchantConfig updateAndReturn(String merchantId, MerchantConfig config) {
+    return configClient.updateConfig(merchantId, config);
+}
+```
+
+---
+
+## 🔹 Difference (very important)
+
+| Annotation  | Behavior              |
+| ----------- | --------------------- |
+| @Cacheable  | Skip method if cached |
+| @CacheEvict | Remove cache          |
+| @CachePut   | Update cache          |
+
+---
+
+# 🔹 8. TTL (Time To Live)
+
+```yaml
 spring:
   cache:
     redis:
       time-to-live: 600000
 ```
 
+👉 Prevents stale data + memory issues
+
 ---
 
-# 🔹 RedisTemplate (Manual Control)
+# 🔹 9. RedisTemplate (Manual Control)
 
 Spring provides **RedisTemplate**
 
 ---
 
-# 🔹 opsForValue() (String Operations)
+## 🔸 opsForValue() (String operations)
 
-## 🔸 Write
+Used for:
 
-```java id="2q5r8x"
-redisTemplate.opsForValue().set("user:1", "Pratik");
-```
-
----
-
-## 🔸 Read
-
-```java id="98y0xg"
-redisTemplate.opsForValue().get("user:1");
-```
+* caching
+* counters
+* locks
 
 ---
 
-## 🔸 TTL
+Here are the same operations rewritten with **generic placeholders** instead of hardcoded values:
 
-```java id="7k4yr5"
+```java
+// Write value
+redisTemplate.opsForValue().set(key, value);
+
+// Read value
+Object result = redisTemplate.opsForValue().get(key);
+
+// Write with TTL
 redisTemplate.opsForValue()
-             .set("otp:1234", "5678", 5, TimeUnit.MINUTES);
+    .set(key, value, ttl, timeUnit);
+
+// Increment (by 1 or custom step)
+redisTemplate.opsForValue().increment(key);
+redisTemplate.opsForValue().increment(key, delta);
+
+// Set if absent (distributed lock pattern with expiry)
+Boolean success = redisTemplate.opsForValue()
+    .setIfAbsent(key, value, ttl, timeUnit);
 ```
 
 ---
 
-## 🔸 Exists
+## 🔍 Meaning of placeholders
 
-```java id="1l9n93"
-redisTemplate.hasKey("user:1");
-```
-
----
-
-## 🔸 Delete
-
-```java id="8h2n7c"
-redisTemplate.delete("user:1");
-```
+* `key` → unique identifier (e.g., `"user:123"`, `"otp:phone:9999"`)
+* `value` → data stored (String / Object depending on serializer)
+* `ttl` → duration (e.g., `5`)
+* `timeUnit` → unit (`TimeUnit.SECONDS`, `MINUTES`, etc.)
+* `delta` → increment step (e.g., `1`, `5`)
 
 ---
 
-## 🔸 Increment / Decrement
+## 🧠 Key Understanding (important)
 
-```java id="1j9nfu"
-redisTemplate.opsForValue().increment("counter");
-redisTemplate.opsForValue().increment("counter", 5);
-redisTemplate.opsForValue().decrement("counter");
-```
-
----
-
-## 🔸 setIfAbsent (Lock)
-
-```java id="8dj5pt"
-redisTemplate.opsForValue()
-    .setIfAbsent("lock:order:1", "locked", 10, TimeUnit.SECONDS);
-```
+* `set(key, value)` → basic cache write
+* `get(key)` → read from Redis
+* `set(key, value, ttl, timeUnit)` → auto-expiring cache
+* `increment(key)` → atomic counter
+* `setIfAbsent(...)` → used for locking (only sets if key doesn’t exist)
 
 ---
 
-## 🔸 Append
+## 🎯 Interview Tip
 
-```java id="3b7z6n"
-redisTemplate.opsForValue().append("key", "data");
-```
+Always talk in terms of:
 
----
+* **key design** (`user:123`, `order:456`)
+* **TTL usage** (avoid stale data)
+* **atomic operations** (increment, locking)
 
-# 🔹 Data Structures Mapping
-
-| Redis Type | Spring        |
-| ---------- | ------------- |
-| String     | opsForValue() |
-| Hash       | opsForHash()  |
-| List       | opsForList()  |
-| Set        | opsForSet()   |
-| ZSet       | opsForZSet()  |
 
 ---
 
-# 🔹 Cache vs RedisTemplate
+## 🔍 Key Insight
+
+* `opsForValue()` → Redis **String type**
+* All operations are **atomic**
+* Used for:
+
+  * rate limiting
+  * distributed locking
+  * counters
+
+---
+
+# 🔹 10. Cache vs RedisTemplate
 
 | Feature     | @Cacheable     | RedisTemplate  |
 | ----------- | -------------- | -------------- |
@@ -221,128 +382,178 @@ redisTemplate.opsForValue().append("key", "data");
 
 ---
 
-# 🔹 Advanced Concepts
+# 🔹 11. Advanced Concepts
 
-## 🔸 Cache Stampede
+## 🧠 1. Cache Aside (Cache-Aside Pattern)
 
-* Many requests hit DB after expiry
+### 🔹 Explanation (from scratch)
 
-## 🔸 Cache Penetration
+Cache Aside means:
 
-* Requests for invalid keys
+* Application is responsible for cache
+* It **checks cache first**
+* If not found → fetch from DB → store in cache → return
 
-## 🔸 Cache Aside Pattern
+👉 Cache is **lazy-loaded** (only filled when needed)
 
-```
-App → Cache → DB → Cache
+---
+
+### 🔹 Flow
+
+```text id="l7jyku"
+Request → Cache
+        → HIT → return
+        → MISS → DB → Cache → return
 ```
 
 ---
 
-# 🔹 Common Mistakes
+### 🔹 Example (simple)
+
+```java id="ehar2y"
+public User getUser(String id) {
+
+    String key = "user:" + id;
+
+    // 1. Check cache
+    User cached = (User) redisTemplate.opsForValue().get(key);
+    if (cached != null) return cached;
+
+    // 2. Fetch from DB
+    User user = userRepository.findById(id).orElse(null);
+
+    // 3. Store in cache
+    if (user != null) {
+        redisTemplate.opsForValue().set(key, user, 10, TimeUnit.MINUTES);
+    }
+
+    return user;
+}
+```
+
+---
+
+### 🎯 Interview Answer
+
+> Cache Aside is a caching pattern where the application first checks the cache, and on a miss, fetches data from the database and updates the cache. It is simple and widely used for read-heavy systems.
+
+---
+
+## 🔥 2. Cache Stampede
+
+### 🔹 Explanation
+
+Cache stampede happens when:
+
+👉 Many requests hit DB at the same time
+👉 Because cache expired for a popular key
+
+---
+
+### 🔹 Example
+
+```text id="u0jhzh"
+user:123 expires at 10:00
+
+At 10:00:
+1000 requests → cache MISS → DB hit 💥
+```
+
+👉 DB gets overloaded
+
+---
+
+### 🔹 Why it happens
+
+* Same TTL for all keys
+* No protection on cache miss
+
+---
+
+### 🔹 Solutions
+
+* Random TTL (spread expiry)
+* Locking (only one request fetches DB)
+* Cache pre-warming
+
+---
+
+### 🎯 Interview Answer
+
+> Cache stampede occurs when many requests simultaneously hit the database after a cache entry expires. It can be mitigated using techniques like randomizing TTL, using distributed locks, or pre-warming the cache.
+
+---
+
+## 🚫 3. Cache Penetration
+
+### 🔹 Explanation
+
+Cache penetration happens when:
+
+👉 Requests are for **data that does not exist**
+
+---
+
+### 🔹 Example
+
+```text id="pdt8ac"
+user:999 (does not exist)
+
+Request → Cache MISS → DB → not found
+Repeat → DB hit again and again ❌
+```
+
+---
+
+### 🔹 Why it’s dangerous
+
+* DB gets unnecessary load
+* Can be used in attacks
+
+---
+
+### 🔹 Solutions
+
+* Cache null values (short TTL)
+* Bloom filter (advanced)
+* Input validation
+
+---
+
+### 🎯 Interview Answer
+
+> Cache penetration occurs when repeated requests for non-existent data bypass the cache and hit the database every time. It can be prevented by caching null responses, using bloom filters, or validating inputs.
+
+---
+
+## ⚖️ Quick Summary
+
+| Concept     | Meaning                                          |
+| ----------- | ------------------------------------------------ |
+| Cache Aside | App controls cache (read → DB → cache)           |
+| Stampede    | Many requests hit DB after expiry                |
+| Penetration | Requests for non-existent data hit DB repeatedly |
+
+
+---
+
+# 🔹 12. Common Mistakes
 
 * Missing `@EnableCaching`
-* Wrong keys
-* No eviction
-* Self-invocation issue
+* Wrong keys → collision
+* No eviction → stale data
+* Self-invocation (Spring proxy issue)
 * No TTL
-* Large objects
+* Large objects in Redis
 
 ---
 
-# 🔹 Real Use Cases
+# 🔹 Final Interview Answer (Polished)
 
-* DB caching
-* sessions
-* rate limiting
-* distributed locking
-
----
-
-# 🔹 Dev Setup: VS Code Dotfiles Symlink
-
-Editor: **Visual Studio Code**
-
----
-
-## 🔸 Source (Dotfiles Repo)
-
-```
-/var/home/pratikc/repos/dotfiles/config/vscode/
-├── settings.json
-└── keybindings.json
-```
-
----
-
-## 🔸 Target (VS Code Config)
-
-```
-~/.config/Code/User/
-```
-
----
-
-## 🔸 Create Directory (if needed)
-
-```bash id="9c3b6d"
-mkdir -p ~/.config/Code/User
-```
-
----
-
-## 🔸 Create Symlinks
-
-```bash id="4d7k2m"
-ln -sf /var/home/pratikc/repos/dotfiles/config/vscode/settings.json ~/.config/Code/User/settings.json
-
-ln -sf /var/home/pratikc/repos/dotfiles/config/vscode/keybindings.json ~/.config/Code/User/keybindings.json
-```
-
----
-
-## 🔸 Verify
-
-```bash id="5f8m1z"
-ls -l ~/.config/Code/User/
-```
-
-Expected:
-
-```
-settings.json -> /var/home/pratikc/repos/dotfiles/config/vscode/settings.json
-keybindings.json -> /var/home/pratikc/repos/dotfiles/config/vscode/keybindings.json
-```
-
----
-
-## 🔸 Backup Existing Config (Optional)
-
-```bash id="2p7s9c"
-mv ~/.config/Code/User/settings.json ~/.config/Code/User/settings.json.bak
-mv ~/.config/Code/User/keybindings.json ~/.config/Code/User/keybindings.json.bak
-```
-
----
-
-## 🔸 Notes
-
-* Close VS Code before linking
-* Use `-sf` to overwrite existing files
-* OSS version path:
-
-  ```
-  ~/.config/Code - OSS/User/
-  ```
-
----
-
-# 🔹 Final Interview Summary
-
-> `@Cacheable` caches method results and skips execution on cache hit.
-> `@CacheEvict` removes stale cache.
-> `@CachePut` updates cache after execution.
-> `RedisTemplate` with `opsForValue()` gives fine-grained control for key-value operations like TTL, atomic increment, and locking.
-> Redis is widely used for caching, sessions, rate limiting, and distributed systems.
+> We integrate Redis using spring-boot-starter-data-redis, configure connection via properties or a RedisConnectionFactory, and optionally define a custom RedisTemplate with JSON serialization for production use.
+>
+> We use @Cacheable to cache DB or microservice (Feign/REST) responses, @CacheEvict to remove stale data after updates, and @CachePut to update cache.
+>
+> For advanced scenarios like distributed locking, counters, or rate limiting, we use RedisTemplate with opsForValue().
 
 ---
