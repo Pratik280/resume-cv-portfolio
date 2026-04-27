@@ -611,6 +611,48 @@ Repeat → DB hit again and again ❌
 * Bloom filter (advanced)
 * Input validation
 
+### 🔹 What is it?
+
+Requests for **non-existent data** keep hitting DB because cache always misses.
+
+```text
+Request → Cache MISS → DB (no data) → repeat ❌
+```
+
+---
+
+### 🔹 Solution 1: Cache Null
+
+Store a placeholder when data not found:
+
+```java
+if (user == null) {
+    redisTemplate.opsForValue()
+        .set(key, "NULL", 2, TimeUnit.MINUTES);
+}
+```
+
+👉 Next request → cache hit → no DB call ✅
+
+---
+
+### 🔹 Solution 2: Validate Input
+
+Reject invalid IDs early (avoid DB hit)
+
+---
+
+### 🔹 Solution 3: Bloom Filter (advanced)
+
+Check if key might exist before DB call
+
+---
+
+### 🎯 Interview Answer
+
+> Cache penetration happens when requests for non-existent data repeatedly hit the database. It can be prevented by caching null values with a short TTL, validating inputs, or using a bloom filter.
+
+
 ---
 
 ### 🎯 Interview Answer
