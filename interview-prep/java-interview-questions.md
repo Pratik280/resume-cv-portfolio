@@ -103,6 +103,7 @@
 - When to use interface vs inheritance
 - Can constructors be polymorphic?
 - What is dynamic method dispatch?
+- What is static method dispatch? and its working for static, private, final methods.
 
 ---
 
